@@ -1,5 +1,1685 @@
 [
   {
+    "updated_at": "2026-06-10T16:58:51+08:00",
+    "comment": null,
+    "tags": [],
+    "subject": {
+      "date": "2025-09-19",
+      "images": {
+        "small": "https://lain.bgm.tv/r/200/pic/cover/l/1a/31/496135_wVkYe.jpg",
+        "grid": "https://lain.bgm.tv/r/100/pic/cover/l/1a/31/496135_wVkYe.jpg",
+        "large": "https://lain.bgm.tv/pic/cover/l/1a/31/496135_wVkYe.jpg",
+        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/1a/31/496135_wVkYe.jpg",
+        "common": "https://lain.bgm.tv/r/400/pic/cover/l/1a/31/496135_wVkYe.jpg"
+      },
+      "name": "ひゃくえむ。",
+      "name_cn": "百米。",
+      "short_summary": "因为天生跑得快，富㭴不只获得了「朋友」，还获得了「容身之处」。为了躲避残酷的现实，转学生小宫拼命地不断奔跑。为了教导小宫跑得更快的方法，富㭴邀请他下课后一起练习。找到了愿意投入的事情后，小宫全心地追求自己的纪录。此后两人在百米赛跑的领域里，",
+      "tags": [
+        {
+          "name": "剧场版",
+          "count": 614,
+          "total_cont": 0
+        },
+        {
+          "name": "运动",
+          "count": 414,
+          "total_cont": 0
+        },
+        {
+          "name": "2025",
+          "count": 383,
+          "total_cont": 0
+        },
+        {
+          "name": "漫画改",
+          "count": 335,
+          "total_cont": 0
+        },
+        {
+          "name": "日本",
+          "count": 182,
+          "total_cont": 0
+        },
+        {
+          "name": "鱼丰",
+          "count": 163,
+          "total_cont": 0
+        },
+        {
+          "name": "漫改",
+          "count": 163,
+          "total_cont": 0
+        },
+        {
+          "name": "ロックンロール・マウンテン",
+          "count": 149,
+          "total_cont": 0
+        },
+        {
+          "name": "剧情",
+          "count": 122,
+          "total_cont": 0
+        },
+        {
+          "name": "岩井澤健治",
+          "count": 79,
+          "total_cont": 0
+        }
+      ],
+      "score": 6.9,
+      "type": 2,
+      "id": 496135,
+      "eps": 1,
+      "volumes": 0,
+      "collection_total": 3669,
+      "rank": 2876
+    },
+    "subject_id": 496135,
+    "vol_status": 0,
+    "ep_status": 0,
+    "subject_type": 2,
+    "type": 1,
+    "rate": 0,
+    "private": false
+  },
+  {
+    "updated_at": "2026-06-10T16:58:46+08:00",
+    "comment": null,
+    "tags": [],
+    "subject": {
+      "date": "2025-07-05",
+      "images": {
+        "small": "https://lain.bgm.tv/r/200/pic/cover/l/b8/0d/513345_jv4wM.jpg",
+        "grid": "https://lain.bgm.tv/r/100/pic/cover/l/b8/0d/513345_jv4wM.jpg",
+        "large": "https://lain.bgm.tv/pic/cover/l/b8/0d/513345_jv4wM.jpg",
+        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/b8/0d/513345_jv4wM.jpg",
+        "common": "https://lain.bgm.tv/r/400/pic/cover/l/b8/0d/513345_jv4wM.jpg"
+      },
+      "name": "薫る花は凛と咲く",
+      "name_cn": "薰香花朵凛然绽放",
+      "short_summary": "“窗帘的另一头，是和我永远没有交集的世界”\r\n差生云集的底层男校千鸟高中，一直被历史悠久的贵族女校桔梗女校所鄙视。\r\n尽管两校的校舍相邻，但桔梗女校从来都是将窗帘拉得严严实实，不让千鸟高中的人看到人影。\r\n在千鸟高中上学的䌷凛太郎，因为长相",
+      "tags": [
+        {
+          "name": "恋爱",
+          "count": 2093,
+          "total_cont": 0
+        },
+        {
+          "name": "校园",
+          "count": 1610,
+          "total_cont": 0
+        },
+        {
+          "name": "CloverWorks",
+          "count": 1325,
+          "total_cont": 0
+        },
+        {
+          "name": "2025年7月",
+          "count": 1193,
+          "total_cont": 0
+        },
+        {
+          "name": "漫画改",
+          "count": 1124,
+          "total_cont": 0
+        },
+        {
+          "name": "TV",
+          "count": 861,
+          "total_cont": 0
+        },
+        {
+          "name": "2025",
+          "count": 533,
+          "total_cont": 0
+        },
+        {
+          "name": "漫改",
+          "count": 509,
+          "total_cont": 0
+        },
+        {
+          "name": "日本",
+          "count": 498,
+          "total_cont": 0
+        },
+        {
+          "name": "日常",
+          "count": 455,
+          "total_cont": 0
+        }
+      ],
+      "score": 6.9,
+      "type": 2,
+      "id": 513345,
+      "eps": 13,
+      "volumes": 0,
+      "collection_total": 20062,
+      "rank": 2825
+    },
+    "subject_id": 513345,
+    "vol_status": 0,
+    "ep_status": 0,
+    "subject_type": 2,
+    "type": 1,
+    "rate": 0,
+    "private": false
+  },
+  {
+    "updated_at": "2026-06-10T16:58:40+08:00",
+    "comment": null,
+    "tags": [],
+    "subject": {
+      "date": "2025-02-05",
+      "images": {
+        "small": "https://lain.bgm.tv/r/200/pic/cover/l/2e/d7/510728_P22GO.jpg",
+        "grid": "https://lain.bgm.tv/r/100/pic/cover/l/2e/d7/510728_P22GO.jpg",
+        "large": "https://lain.bgm.tv/pic/cover/l/2e/d7/510728_P22GO.jpg",
+        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/2e/d7/510728_P22GO.jpg",
+        "common": "https://lain.bgm.tv/r/400/pic/cover/l/2e/d7/510728_P22GO.jpg"
+      },
+      "name": "Re:ゼロから始める異世界生活 3rd season 反擊編",
+      "name_cn": "Re：从零开始的异世界生活 第三季 反击篇",
+      "short_summary": "襲い来るエルザたちの猛攻を退け、大兎との戦いでベアトリスとの契約を果たした「聖域」の解放から1年が過ぎた。\r\n王選に臨むエミリア陣営は一致団結、充実した日々を送っていたナツキ・スバルだったが、平穏は使者によって届けられた一枚の書状によって終",
+      "tags": [
+        {
+          "name": "异世界",
+          "count": 1558,
+          "total_cont": 0
+        },
+        {
+          "name": "奇幻",
+          "count": 1137,
+          "total_cont": 0
+        },
+        {
+          "name": "战斗",
+          "count": 1084,
+          "total_cont": 0
+        },
+        {
+          "name": "WHITEFOX",
+          "count": 1009,
+          "total_cont": 0
+        },
+        {
+          "name": "2025年1月",
+          "count": 964,
+          "total_cont": 0
+        },
+        {
+          "name": "轻小说改",
+          "count": 882,
+          "total_cont": 0
+        },
+        {
+          "name": "TV",
+          "count": 845,
+          "total_cont": 0
+        },
+        {
+          "name": "冒险",
+          "count": 500,
+          "total_cont": 0
+        },
+        {
+          "name": "2025",
+          "count": 474,
+          "total_cont": 0
+        },
+        {
+          "name": "小说改",
+          "count": 472,
+          "total_cont": 0
+        }
+      ],
+      "score": 7,
+      "type": 2,
+      "id": 510728,
+      "eps": 8,
+      "volumes": 0,
+      "collection_total": 16525,
+      "rank": 2766
+    },
+    "subject_id": 510728,
+    "vol_status": 0,
+    "ep_status": 0,
+    "subject_type": 2,
+    "type": 2,
+    "rate": 10,
+    "private": false
+  },
+  {
+    "updated_at": "2026-06-10T16:58:20+08:00",
+    "comment": null,
+    "tags": [],
+    "subject": {
+      "date": "2025-04-16",
+      "images": {
+        "small": "https://lain.bgm.tv/r/200/pic/cover/l/01/d5/504950_WmdZx.jpg",
+        "grid": "https://lain.bgm.tv/r/100/pic/cover/l/01/d5/504950_WmdZx.jpg",
+        "large": "https://lain.bgm.tv/pic/cover/l/01/d5/504950_WmdZx.jpg",
+        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/01/d5/504950_WmdZx.jpg",
+        "common": "https://lain.bgm.tv/r/400/pic/cover/l/01/d5/504950_WmdZx.jpg"
+      },
+      "name": "リコリス・リコイル Friends are thieves of time.",
+      "name_cn": "莉可丽丝：友谊是时间的窃贼",
+      "short_summary": "喫茶リコリコを舞台に\r\n千束やたきな達の日常を6本お届けします",
+      "tags": [
+        {
+          "name": "原创",
+          "count": 1204,
+          "total_cont": 0
+        },
+        {
+          "name": "日常",
+          "count": 1016,
+          "total_cont": 0
+        },
+        {
+          "name": "A-1Pictures",
+          "count": 938,
+          "total_cont": 0
+        },
+        {
+          "name": "泡面番",
+          "count": 911,
+          "total_cont": 0
+        },
+        {
+          "name": "2025年4月",
+          "count": 813,
+          "total_cont": 0
+        },
+        {
+          "name": "百合",
+          "count": 685,
+          "total_cont": 0
+        },
+        {
+          "name": "WEB",
+          "count": 509,
+          "total_cont": 0
+        },
+        {
+          "name": "2025",
+          "count": 498,
+          "total_cont": 0
+        },
+        {
+          "name": "莉可丽丝",
+          "count": 496,
+          "total_cont": 0
+        },
+        {
+          "name": "短片",
+          "count": 383,
+          "total_cont": 0
+        }
+      ],
+      "score": 7.1,
+      "type": 2,
+      "id": 504950,
+      "eps": 6,
+      "volumes": 0,
+      "collection_total": 11891,
+      "rank": 2039
+    },
+    "subject_id": 504950,
+    "vol_status": 0,
+    "ep_status": 0,
+    "subject_type": 2,
+    "type": 3,
+    "rate": 0,
+    "private": false
+  },
+  {
+    "updated_at": "2026-06-10T16:57:50+08:00",
+    "comment": null,
+    "tags": [],
+    "subject": {
+      "date": "2025-11-07",
+      "images": {
+        "small": "https://lain.bgm.tv/r/200/pic/cover/l/2f/bb/442615_ElcsS.jpg",
+        "grid": "https://lain.bgm.tv/r/100/pic/cover/l/2f/bb/442615_ElcsS.jpg",
+        "large": "https://lain.bgm.tv/pic/cover/l/2f/bb/442615_ElcsS.jpg",
+        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/2f/bb/442615_ElcsS.jpg",
+        "common": "https://lain.bgm.tv/r/400/pic/cover/l/2f/bb/442615_ElcsS.jpg"
+      },
+      "name": "映画 ラブライブ！虹ヶ咲学園スクールアイドル同好会 完結編 第2章",
+      "name_cn": "电影 Love Live! 虹咲学园校园偶像同好会 完结篇 第2章",
+      "short_summary": "「今もっとも推せるスクールアイドル」を決めるスクールアイドルGPX（グランプリ）。\r\n沖縄で���きな盛り上がりを見せたこのイベントに参加するため、\r\n時を同じくして、果林、愛、せつ菜、璃奈、栞子、ミアの6人は、もうひとつの会場を訪れていた。\r",
+      "tags": [
+        {
+          "name": "剧场版",
+          "count": 194,
+          "total_cont": 0
+        },
+        {
+          "name": "SUNRISE",
+          "count": 139,
+          "total_cont": 0
+        },
+        {
+          "name": "2025",
+          "count": 125,
+          "total_cont": 0
+        },
+        {
+          "name": "原创",
+          "count": 117,
+          "total_cont": 0
+        },
+        {
+          "name": "偶像",
+          "count": 107,
+          "total_cont": 0
+        },
+        {
+          "name": "LoveLive",
+          "count": 79,
+          "total_cont": 0
+        },
+        {
+          "name": "百合",
+          "count": 65,
+          "total_cont": 0
+        },
+        {
+          "name": "河村智之",
+          "count": 56,
+          "total_cont": 0
+        },
+        {
+          "name": "音乐",
+          "count": 53,
+          "total_cont": 0
+        },
+        {
+          "name": "日本",
+          "count": 35,
+          "total_cont": 0
+        }
+      ],
+      "score": 7.3,
+      "type": 2,
+      "id": 442615,
+      "eps": 1,
+      "volumes": 0,
+      "collection_total": 1061,
+      "rank": 1549
+    },
+    "subject_id": 442615,
+    "vol_status": 0,
+    "ep_status": 0,
+    "subject_type": 2,
+    "type": 1,
+    "rate": 0,
+    "private": false
+  },
+  {
+    "updated_at": "2026-06-10T16:57:40+08:00",
+    "comment": null,
+    "tags": [],
+    "subject": {
+      "date": "2025-11-14",
+      "images": {
+        "small": "https://lain.bgm.tv/r/200/pic/cover/l/0b/cf/512793_PrzXC.jpg",
+        "grid": "https://lain.bgm.tv/r/100/pic/cover/l/0b/cf/512793_PrzXC.jpg",
+        "large": "https://lain.bgm.tv/pic/cover/l/0b/cf/512793_PrzXC.jpg",
+        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/0b/cf/512793_PrzXC.jpg",
+        "common": "https://lain.bgm.tv/r/400/pic/cover/l/0b/cf/512793_PrzXC.jpg"
+      },
+      "name": "劇場版総集編 ガール���バンドクライ なぁ、未来。",
+      "name_cn": "剧场版总集篇 少女乐队的呐喊 呐、未来。",
+      "short_summary": "トゲナシトゲアリを結成した仁菜は捨ててきた故郷と向き合う。\r\n\r\n桃香は捨ててきたバンド「ダイヤモンドダスト」と向き合う。\r\n\r\nそれぞれ過去を克服した2人に触発された一同は過去を乗り越えプロを目指すが、大人社会の論理になじめずプロを脱退。",
+      "tags": [
+        {
+          "name": "剧场版",
+          "count": 83,
+          "total_cont": 0
+        },
+        {
+          "name": "2025",
+          "count": 50,
+          "total_cont": 0
+        },
+        {
+          "name": "原创",
+          "count": 49,
+          "total_cont": 0
+        },
+        {
+          "name": "总集篇",
+          "count": 48,
+          "total_cont": 0
+        },
+        {
+          "name": "音乐",
+          "count": 37,
+          "total_cont": 0
+        },
+        {
+          "name": "東映アニメーション",
+          "count": 24,
+          "total_cont": 0
+        },
+        {
+          "name": "乐队",
+          "count": 21,
+          "total_cont": 0
+        },
+        {
+          "name": "百合",
+          "count": 17,
+          "total_cont": 0
+        },
+        {
+          "name": "东映动画",
+          "count": 15,
+          "total_cont": 0
+        },
+        {
+          "name": "日本",
+          "count": 14,
+          "total_cont": 0
+        }
+      ],
+      "score": 7.4,
+      "type": 2,
+      "id": 512793,
+      "eps": 1,
+      "volumes": 0,
+      "collection_total": 788,
+      "rank": 1421
+    },
+    "subject_id": 512793,
+    "vol_status": 0,
+    "ep_status": 0,
+    "subject_type": 2,
+    "type": 1,
+    "rate": 0,
+    "private": false
+  },
+  {
+    "updated_at": "2026-06-10T16:57:34+08:00",
+    "comment": null,
+    "tags": [],
+    "subject": {
+      "date": "2025-07-03",
+      "images": {
+        "small": "https://lain.bgm.tv/r/200/pic/cover/l/4a/2b/529431_a7joa.jpg",
+        "grid": "https://lain.bgm.tv/r/100/pic/cover/l/4a/2b/529431_a7joa.jpg",
+        "large": "https://lain.bgm.tv/pic/cover/l/4a/2b/529431_a7joa.jpg",
+        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/4a/2b/529431_a7joa.jpg",
+        "common": "https://lain.bgm.tv/r/400/pic/cover/l/4a/2b/529431_a7joa.jpg"
+      },
+      "name": "ダンダダン 第2期",
+      "name_cn": "胆大党 第二季",
+      "short_summary": "霊媒師の家系に生まれた女子高生・モモ＜綾瀬桃＞と、\r\n同級生でオカルトマニアのオカルン＜高倉健＞。\r\n\r\nモモがクラスのいじめっ子からオカルンを助けたことをきっかけに\r\n話すようになった2人だったが、\r\n「幽霊は信じているが宇宙人否定派」の",
+      "tags": [
+        {
+          "name": "战斗",
+          "count": 2029,
+          "total_cont": 0
+        },
+        {
+          "name": "奇幻",
+          "count": 1944,
+          "total_cont": 0
+        },
+        {
+          "name": "漫画改",
+          "count": 1624,
+          "total_cont": 0
+        },
+        {
+          "name": "2025年7月",
+          "count": 1474,
+          "total_cont": 0
+        },
+        {
+          "name": "ScienceSARU",
+          "count": 1265,
+          "total_cont": 0
+        },
+        {
+          "name": "TV",
+          "count": 1241,
+          "total_cont": 0
+        },
+        {
+          "name": "搞笑",
+          "count": 1026,
+          "total_cont": 0
+        },
+        {
+          "name": "2025",
+          "count": 729,
+          "total_cont": 0
+        },
+        {
+          "name": "日本",
+          "count": 703,
+          "total_cont": 0
+        },
+        {
+          "name": "漫改",
+          "count": 661,
+          "total_cont": 0
+        }
+      ],
+      "score": 7.3,
+      "type": 2,
+      "id": 529431,
+      "eps": 12,
+      "volumes": 0,
+      "collection_total": 24556,
+      "rank": 1393
+    },
+    "subject_id": 529431,
+    "vol_status": 0,
+    "ep_status": 0,
+    "subject_type": 2,
+    "type": 2,
+    "rate": 10,
+    "private": false
+  },
+  {
+    "updated_at": "2026-06-10T16:57:28+08:00",
+    "comment": null,
+    "tags": [],
+    "subject": {
+      "date": "2025-04-05",
+      "images": {
+        "small": "https://lain.bgm.tv/r/200/pic/cover/l/e3/4e/513018_as6S2.jpg",
+        "grid": "https://lain.bgm.tv/r/100/pic/cover/l/e3/4e/513018_as6S2.jpg",
+        "large": "https://lain.bgm.tv/pic/cover/l/e3/4e/513018_as6S2.jpg",
+        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/e3/4e/513018_as6S2.jpg",
+        "common": "https://lain.bgm.tv/r/400/pic/cover/l/e3/4e/513018_as6S2.jpg"
+      },
+      "name": "小市民シリーズ 第2期",
+      "name_cn": "小市民系列 第二季",
+      "short_summary": "我想知道，所谓的恋爱究竟是什么。\r\n\r\n解除了互相帮助的「互惠关系」后，高二的小鸠和小佐内各自展开了新的生活。\r\n小佐内开始和新闻社一年级的瓜野交往。瓜野为了留下在学的证明，并向小佐内展现自己的优点，努力地想在校园报纸上报导市内发生的纵火事",
+      "tags": [
+        {
+          "name": "推理",
+          "count": 1183,
+          "total_cont": 0
+        },
+        {
+          "name": "2025年4月",
+          "count": 945,
+          "total_cont": 0
+        },
+        {
+          "name": "小说改",
+          "count": 878,
+          "total_cont": 0
+        },
+        {
+          "name": "TV",
+          "count": 810,
+          "total_cont": 0
+        },
+        {
+          "name": "日常",
+          "count": 689,
+          "total_cont": 0
+        },
+        {
+          "name": "米泽穗信",
+          "count": 654,
+          "total_cont": 0
+        },
+        {
+          "name": "LapinTrack",
+          "count": 607,
+          "total_cont": 0
+        },
+        {
+          "name": "校园",
+          "count": 601,
+          "total_cont": 0
+        },
+        {
+          "name": "2025",
+          "count": 473,
+          "total_cont": 0
+        },
+        {
+          "name": "日本",
+          "count": 354,
+          "total_cont": 0
+        }
+      ],
+      "score": 7.3,
+      "type": 2,
+      "id": 513018,
+      "eps": 12,
+      "volumes": 0,
+      "collection_total": 9803,
+      "rank": 1386
+    },
+    "subject_id": 513018,
+    "vol_status": 0,
+    "ep_status": 0,
+    "subject_type": 2,
+    "type": 2,
+    "rate": 10,
+    "private": false
+  },
+  {
+    "updated_at": "2026-06-10T16:57:21+08:00",
+    "comment": null,
+    "tags": [],
+    "subject": {
+      "date": "2025-07-07",
+      "images": {
+        "small": "https://lain.bgm.tv/r/200/pic/cover/l/d6/29/515880_96Oxr.jpg",
+        "grid": "https://lain.bgm.tv/r/100/pic/cover/l/d6/29/515880_96Oxr.jpg",
+        "large": "https://lain.bgm.tv/pic/cover/l/d6/29/515880_96Oxr.jpg",
+        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/d6/29/515880_96Oxr.jpg",
+        "common": "https://lain.bgm.tv/r/400/pic/cover/l/d6/29/515880_96Oxr.jpg"
+      },
+      "name": "ぐらんぶる Season 2",
+      "name_cn": "碧蓝之海 第二季",
+      "short_summary": "我们的夏天不会结束！北原伊织在伊豆开始大学生活已经三个月——\r\n\r\n寄住的潜水商店「Grand Blue」里，他和可爱的表妹古手川千纱同住一个屋檐下。再加上表姊古手川奈奈华、散发成熟魅力令人难以抗拒的滨冈梓，以及同学吉原爱菜，共同度过了顺风",
+      "tags": [
+        {
+          "name": "搞笑",
+          "count": 2499,
+          "total_cont": 0
+        },
+        {
+          "name": "漫画改",
+          "count": 1770,
+          "total_cont": 0
+        },
+        {
+          "name": "喜剧",
+          "count": 1536,
+          "total_cont": 0
+        },
+        {
+          "name": "2025年7月",
+          "count": 1428,
+          "total_cont": 0
+        },
+        {
+          "name": "日常",
+          "count": 1282,
+          "total_cont": 0
+        },
+        {
+          "name": "TV",
+          "count": 1113,
+          "total_cont": 0
+        },
+        {
+          "name": "颜艺",
+          "count": 1031,
+          "total_cont": 0
+        },
+        {
+          "name": "校园",
+          "count": 992,
+          "total_cont": 0
+        },
+        {
+          "name": "ZERO-G",
+          "count": 684,
+          "total_cont": 0
+        },
+        {
+          "name": "日本",
+          "count": 590,
+          "total_cont": 0
+        }
+      ],
+      "score": 7.3,
+      "type": 2,
+      "id": 515880,
+      "eps": 12,
+      "volumes": 0,
+      "collection_total": 28533,
+      "rank": 1279
+    },
+    "subject_id": 515880,
+    "vol_status": 0,
+    "ep_status": 0,
+    "subject_type": 2,
+    "type": 2,
+    "rate": 10,
+    "private": false
+  },
+  {
+    "updated_at": "2026-06-10T16:57:15+08:00",
+    "comment": null,
+    "tags": [],
+    "subject": {
+      "date": "2025-07-18",
+      "images": {
+        "small": "https://lain.bgm.tv/r/200/pic/cover/l/f6/0b/501958_VZs4W.jpg",
+        "grid": "https://lain.bgm.tv/r/100/pic/cover/l/f6/0b/501958_VZs4W.jpg",
+        "large": "https://lain.bgm.tv/pic/cover/l/f6/0b/501958_VZs4W.jpg",
+        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/f6/0b/501958_VZs4W.jpg",
+        "common": "https://lain.bgm.tv/r/400/pic/cover/l/f6/0b/501958_VZs4W.jpg"
+      },
+      "name": "劇場版 鬼滅の刃 無限城編 第一章 猗窩座再来",
+      "name_cn": "剧场版 鬼灭之刃 无限城篇 第一章 猗窝座再袭",
+      "short_summary": "灶门炭治郎为了让成为鬼的妹妹祢豆子变回人类，加入狩猎鬼的组织「鬼杀队」。\r\n入队之后，他与伙伴我妻善逸以及嘴平伊之助跟各式各样的鬼战斗，在成长的同时加深友情与羁绊。\r\n然后，炭治郎与「鬼杀队」最高阶的剑士「柱」一同战斗，在《无限列车》跟炎柱",
+      "tags": [
+        {
+          "name": "剧场版",
+          "count": 1989,
+          "total_cont": 0
+        },
+        {
+          "name": "ufotable",
+          "count": 1294,
+          "total_cont": 0
+        },
+        {
+          "name": "战斗",
+          "count": 1214,
+          "total_cont": 0
+        },
+        {
+          "name": "热血",
+          "count": 982,
+          "total_cont": 0
+        },
+        {
+          "name": "漫画改",
+          "count": 966,
+          "total_cont": 0
+        },
+        {
+          "name": "鬼灭之刃",
+          "count": 851,
+          "total_cont": 0
+        },
+        {
+          "name": "2025",
+          "count": 838,
+          "total_cont": 0
+        },
+        {
+          "name": "奇幻",
+          "count": 731,
+          "total_cont": 0
+        },
+        {
+          "name": "日本",
+          "count": 543,
+          "total_cont": 0
+        },
+        {
+          "name": "漫改",
+          "count": 451,
+          "total_cont": 0
+        }
+      ],
+      "score": 7.4,
+      "type": 2,
+      "id": 501958,
+      "eps": 1,
+      "volumes": 0,
+      "collection_total": 13996,
+      "rank": 1169
+    },
+    "subject_id": 501958,
+    "vol_status": 0,
+    "ep_status": 0,
+    "subject_type": 2,
+    "type": 2,
+    "rate": 10,
+    "private": false
+  },
+  {
+    "updated_at": "2026-06-10T16:57:03+08:00",
+    "comment": null,
+    "tags": [],
+    "subject": {
+      "date": "2025-07-07",
+      "images": {
+        "small": "https://lain.bgm.tv/r/200/pic/cover/l/ae/03/524707_1quxk.jpg",
+        "grid": "https://lain.bgm.tv/r/100/pic/cover/l/ae/03/524707_1quxk.jpg",
+        "large": "https://lain.bgm.tv/pic/cover/l/ae/03/524707_1quxk.jpg",
+        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/ae/03/524707_1quxk.jpg",
+        "common": "https://lain.bgm.tv/r/400/pic/cover/l/ae/03/524707_1quxk.jpg"
+      },
+      "name": "わたしが恋人になれるわけないじゃん、ムリムリ！（※ムリじゃなかった!?）",
+      "name_cn": "我们不可能成为恋人！绝对不行。 (※似乎可行？)",
+      "short_summary": "「勝ち取るんだ最高の学園生活を！」 \r\n\r\nぼっちな中学生時代から変わるため、高校デビューを果たした甘織れな子。しかし根が陰キャ気質のせいで、憧れの陽キャ生活に馴染めず窒息寸前に…。 \r\n\r\n現役モデルの完璧美少女、王塚真唯\r\n優しくてふわ",
+      "tags": [
+        {
+          "name": "百合",
+          "count": 4451,
+          "total_cont": 0
+        },
+        {
+          "name": "后宫",
+          "count": 2790,
+          "total_cont": 0
+        },
+        {
+          "name": "校园",
+          "count": 2414,
+          "total_cont": 0
+        },
+        {
+          "name": "喜剧",
+          "count": 2348,
+          "total_cont": 0
+        },
+        {
+          "name": "恋爱",
+          "count": 2005,
+          "total_cont": 0
+        },
+        {
+          "name": "2025年7月",
+          "count": 1908,
+          "total_cont": 0
+        },
+        {
+          "name": "TV",
+          "count": 1277,
+          "total_cont": 0
+        },
+        {
+          "name": "studioMOTHER",
+          "count": 1123,
+          "total_cont": 0
+        },
+        {
+          "name": "轻小说改",
+          "count": 1105,
+          "total_cont": 0
+        },
+        {
+          "name": "小说改",
+          "count": 930,
+          "total_cont": 0
+        }
+      ],
+      "score": 7.4,
+      "type": 2,
+      "id": 524707,
+      "eps": 12,
+      "volumes": 0,
+      "collection_total": 32046,
+      "rank": 1024
+    },
+    "subject_id": 524707,
+    "vol_status": 0,
+    "ep_status": 0,
+    "subject_type": 2,
+    "type": 2,
+    "rate": 0,
+    "private": false
+  },
+  {
+    "updated_at": "2026-06-10T16:56:55+08:00",
+    "comment": null,
+    "tags": [],
+    "subject": {
+      "date": "2025-04-25",
+      "images": {
+        "small": "https://lain.bgm.tv/r/200/pic/cover/l/17/96/513089_EUq63.jpg",
+        "grid": "https://lain.bgm.tv/r/100/pic/cover/l/17/96/513089_EUq63.jpg",
+        "large": "https://lain.bgm.tv/pic/cover/l/17/96/513089_EUq63.jpg",
+        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/17/96/513089_EUq63.jpg",
+        "common": "https://lain.bgm.tv/r/400/pic/cover/l/17/96/513089_EUq63.jpg"
+      },
+      "name": "この素晴らしい世界に祝福を！３ーBONUS STAGEー",
+      "name_cn": "为美好的世界献上祝福！第三季 ーBONUS STAGEー",
+      "short_summary": "交通事故（!?）によりあっけなく人生の幕を閉じるはずだったゲームを愛するひきこもりの佐藤和真（カズマ）は、ひょんなことから、女神アクアを道連れに異世界へ転生する。\r\n冒険者生活や勇者への憧れに胸を高鳴らせたのも束の間、転生したカズマには厄介",
+      "tags": [
+        {
+          "name": "OVA",
+          "count": 1096,
+          "total_cont": 0
+        },
+        {
+          "name": "搞笑",
+          "count": 968,
+          "total_cont": 0
+        },
+        {
+          "name": "异世界",
+          "count": 925,
+          "total_cont": 0
+        },
+        {
+          "name": "2025",
+          "count": 550,
+          "total_cont": 0
+        },
+        {
+          "name": "轻小说改",
+          "count": 514,
+          "total_cont": 0
+        },
+        {
+          "name": "為美好的世界獻上祝福！",
+          "count": 424,
+          "total_cont": 0
+        },
+        {
+          "name": "2025年4月",
+          "count": 410,
+          "total_cont": 0
+        },
+        {
+          "name": "小说改",
+          "count": 342,
+          "total_cont": 0
+        },
+        {
+          "name": "奇幻",
+          "count": 291,
+          "total_cont": 0
+        },
+        {
+          "name": "drive",
+          "count": 274,
+          "total_cont": 0
+        }
+      ],
+      "score": 7.5,
+      "type": 2,
+      "id": 513089,
+      "eps": 2,
+      "volumes": 0,
+      "collection_total": 12048,
+      "rank": 945
+    },
+    "subject_id": 513089,
+    "vol_status": 0,
+    "ep_status": 0,
+    "subject_type": 2,
+    "type": 1,
+    "rate": 0,
+    "private": false
+  },
+  {
+    "updated_at": "2026-06-10T16:56:47+08:00",
+    "comment": null,
+    "tags": [],
+    "subject": {
+      "date": "2025-07-03",
+      "images": {
+        "small": "https://lain.bgm.tv/r/200/pic/cover/l/46/4d/545328_2RRhx.jpg",
+        "grid": "https://lain.bgm.tv/r/100/pic/cover/l/46/4d/545328_2RRhx.jpg",
+        "large": "https://lain.bgm.tv/pic/cover/l/46/4d/545328_2RRhx.jpg",
+        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/46/4d/545328_2RRhx.jpg",
+        "common": "https://lain.bgm.tv/r/400/pic/cover/l/46/4d/545328_2RRhx.jpg"
+      },
+      "name": "銀河特急 ミルキー☆サブウェイ",
+      "name_cn": "银河特急 银河☆地铁",
+      "short_summary": "銀河道路交通法違反で逮捕されてしまった強化人間のチハルとサイボーグのマキナ。二人に課せられたのは惑星間走行列車・通称ミルキー☆サブウェイの清掃作業。簡単な任務のはずだったが、やがて二人は大きな事件に巻き込まれていってしまう！意図なし！主義な",
+      "tags": [
+        {
+          "name": "原创",
+          "count": 1211,
+          "total_cont": 0
+        },
+        {
+          "name": "泡面番",
+          "count": 1076,
+          "total_cont": 0
+        },
+        {
+          "name": "科幻",
+          "count": 850,
+          "total_cont": 0
+        },
+        {
+          "name": "2025年7月",
+          "count": 740,
+          "total_cont": 0
+        },
+        {
+          "name": "短片",
+          "count": 686,
+          "total_cont": 0
+        },
+        {
+          "name": "TV",
+          "count": 561,
+          "total_cont": 0
+        },
+        {
+          "name": "搞笑",
+          "count": 534,
+          "total_cont": 0
+        },
+        {
+          "name": "2025",
+          "count": 441,
+          "total_cont": 0
+        },
+        {
+          "name": "3D",
+          "count": 415,
+          "total_cont": 0
+        },
+        {
+          "name": "日本",
+          "count": 372,
+          "total_cont": 0
+        }
+      ],
+      "score": 7.5,
+      "type": 2,
+      "id": 545328,
+      "eps": 12,
+      "volumes": 0,
+      "collection_total": 8057,
+      "rank": 829
+    },
+    "subject_id": 545328,
+    "vol_status": 0,
+    "ep_status": 0,
+    "subject_type": 2,
+    "type": 2,
+    "rate": 10,
+    "private": false
+  },
+  {
+    "updated_at": "2026-06-10T16:56:41+08:00",
+    "comment": null,
+    "tags": [],
+    "subject": {
+      "date": "2025-07-06",
+      "images": {
+        "small": "https://lain.bgm.tv/r/200/pic/cover/l/b2/c2/514358_oRoZH.jpg",
+        "grid": "https://lain.bgm.tv/r/100/pic/cover/l/b2/c2/514358_oRoZH.jpg",
+        "large": "https://lain.bgm.tv/pic/cover/l/b2/c2/514358_oRoZH.jpg",
+        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/b2/c2/514358_oRoZH.jpg",
+        "common": "https://lain.bgm.tv/r/400/pic/cover/l/b2/c2/514358_oRoZH.jpg"
+      },
+      "name": "CITY THE ANIMATION",
+      "name_cn": "小城日常",
+      "short_summary": "この街、ただの街にあらず。\r\n\r\n笑いあり プププッ\r\nラブあり キュンキュン\r\nホロリあり ホロリホロリ\r\n\r\n住人たちが織りなす\r\n予測不能な平凡ライフ！\r\n\r\nワクワクが連鎖する\r\nCITYへようこそ。\r\n\r\n\r\n\r\n[中文简介]\r\n",
+      "tags": [
+        {
+          "name": "京阿尼",
+          "count": 2606,
+          "total_cont": 0
+        },
+        {
+          "name": "日常",
+          "count": 2270,
+          "total_cont": 0
+        },
+        {
+          "name": "漫画改",
+          "count": 1730,
+          "total_cont": 0
+        },
+        {
+          "name": "2025年7月",
+          "count": 1717,
+          "total_cont": 0
+        },
+        {
+          "name": "TV",
+          "count": 1472,
+          "total_cont": 0
+        },
+        {
+          "name": "搞笑",
+          "count": 1470,
+          "total_cont": 0
+        },
+        {
+          "name": "京都动画",
+          "count": 945,
+          "total_cont": 0
+        },
+        {
+          "name": "2025",
+          "count": 866,
+          "total_cont": 0
+        },
+        {
+          "name": "石立太一",
+          "count": 765,
+          "total_cont": 0
+        },
+        {
+          "name": "日本",
+          "count": 684,
+          "total_cont": 0
+        }
+      ],
+      "score": 7.5,
+      "type": 2,
+      "id": 514358,
+      "eps": 13,
+      "volumes": 0,
+      "collection_total": 22754,
+      "rank": 825
+    },
+    "subject_id": 514358,
+    "vol_status": 0,
+    "ep_status": 0,
+    "subject_type": 2,
+    "type": 2,
+    "rate": 10,
+    "private": false
+  },
+  {
+    "updated_at": "2026-06-10T16:56:32+08:00",
+    "comment": null,
+    "tags": [],
+    "subject": {
+      "date": "2025-04-12",
+      "images": {
+        "small": "https://lain.bgm.tv/r/200/pic/cover/l/d3/5d/531159_BayD9.jpg",
+        "grid": "https://lain.bgm.tv/r/100/pic/cover/l/d3/5d/531159_BayD9.jpg",
+        "large": "https://lain.bgm.tv/pic/cover/l/d3/5d/531159_BayD9.jpg",
+        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/d3/5d/531159_BayD9.jpg",
+        "common": "https://lain.bgm.tv/r/400/pic/cover/l/d3/5d/531159_BayD9.jpg"
+      },
+      "name": "日々は過ぎれど飯うまし",
+      "name_cn": "时光流逝，饭菜依旧美味",
+      "short_summary": "可爱×美味=最强美食\r\n五名刚刚成为大学生的女孩们共同演绎的日常故事。\r\n热爱美食，想和大家一起尽情玩耍，学习也要稍加努力，如此这般，尽情享受大学生活吧！",
+      "tags": [
+        {
+          "name": "原创",
+          "count": 3242,
+          "total_cont": 0
+        },
+        {
+          "name": "美食",
+          "count": 3078,
+          "total_cont": 0
+        },
+        {
+          "name": "日常",
+          "count": 3065,
+          "total_cont": 0
+        },
+        {
+          "name": "P.A.WORKS",
+          "count": 3034,
+          "total_cont": 0
+        },
+        {
+          "name": "2025年4月",
+          "count": 2084,
+          "total_cont": 0
+        },
+        {
+          "name": "TV",
+          "count": 1766,
+          "total_cont": 0
+        },
+        {
+          "name": "轻百合",
+          "count": 1712,
+          "total_cont": 0
+        },
+        {
+          "name": "日本",
+          "count": 1042,
+          "total_cont": 0
+        },
+        {
+          "name": "2025",
+          "count": 1023,
+          "total_cont": 0
+        },
+        {
+          "name": "轻百",
+          "count": 864,
+          "total_cont": 0
+        }
+      ],
+      "score": 7.7,
+      "type": 2,
+      "id": 531159,
+      "eps": 12,
+      "volumes": 0,
+      "collection_total": 27803,
+      "rank": 577
+    },
+    "subject_id": 531159,
+    "vol_status": 0,
+    "ep_status": 0,
+    "subject_type": 2,
+    "type": 2,
+    "rate": 10,
+    "private": false
+  },
+  {
+    "updated_at": "2026-06-10T16:56:23+08:00",
+    "comment": null,
+    "tags": [],
+    "subject": {
+      "date": "2025-01-04",
+      "images": {
+        "small": "https://lain.bgm.tv/r/200/pic/cover/l/ce/3c/430699_hsj90.jpg",
+        "grid": "https://lain.bgm.tv/r/100/pic/cover/l/ce/3c/430699_hsj90.jpg",
+        "large": "https://lain.bgm.tv/pic/cover/l/ce/3c/430699_hsj90.jpg",
+        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/ce/3c/430699_hsj90.jpg",
+        "common": "https://lain.bgm.tv/r/400/pic/cover/l/ce/3c/430699_hsj90.jpg"
+      },
+      "name": "メダリスト",
+      "name_cn": "金牌得主",
+      "short_summary": "作为滑冰者遭遇挫折的青年·明浦路司遇到了对花样滑冰世界充满憧憬的少女·结束祈。\r\n在对冰场怀有执念的祈的推动下，司决定亲自担任教练。\r\n随着祈逐渐展现出自己的才能，司也作为指导者不断成长。\r\n两人组成搭档，目标是荣耀的“金牌得主”——！",
+      "tags": [
+        {
+          "name": "运动",
+          "count": 3686,
+          "total_cont": 0
+        },
+        {
+          "name": "漫画改",
+          "count": 2787,
+          "total_cont": 0
+        },
+        {
+          "name": "2025年1月",
+          "count": 2392,
+          "total_cont": 0
+        },
+        {
+          "name": "花田十辉",
+          "count": 2051,
+          "total_cont": 0
+        },
+        {
+          "name": "TV",
+          "count": 2004,
+          "total_cont": 0
+        },
+        {
+          "name": "Engi",
+          "count": 1726,
+          "total_cont": 0
+        },
+        {
+          "name": "滑冰",
+          "count": 1697,
+          "total_cont": 0
+        },
+        {
+          "name": "竞技",
+          "count": 1422,
+          "total_cont": 0
+        },
+        {
+          "name": "日本",
+          "count": 1206,
+          "total_cont": 0
+        },
+        {
+          "name": "2025",
+          "count": 1123,
+          "total_cont": 0
+        }
+      ],
+      "score": 8,
+      "type": 2,
+      "id": 430699,
+      "eps": 13,
+      "volumes": 0,
+      "collection_total": 28230,
+      "rank": 224
+    },
+    "subject_id": 430699,
+    "vol_status": 0,
+    "ep_status": 0,
+    "subject_type": 2,
+    "type": 2,
+    "rate": 10,
+    "private": false
+  },
+  {
+    "updated_at": "2026-06-10T16:56:17+08:00",
+    "comment": null,
+    "tags": [],
+    "subject": {
+      "date": "2025-07-06",
+      "images": {
+        "small": "https://lain.bgm.tv/r/200/pic/cover/l/27/d7/512190_3FtCT.jpg",
+        "grid": "https://lain.bgm.tv/r/100/pic/cover/l/27/d7/512190_3FtCT.jpg",
+        "large": "https://lain.bgm.tv/pic/cover/l/27/d7/512190_3FtCT.jpg",
+        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/27/d7/512190_3FtCT.jpg",
+        "common": "https://lain.bgm.tv/r/400/pic/cover/l/27/d7/512190_3FtCT.jpg"
+      },
+      "name": "瑠璃の宝石",
+      "name_cn": "琉璃的宝石",
+      "short_summary": "最喜欢闪亮亮事物的女高中生──谷川瑠璃，有天听说「可以靠自己采到水晶！」而为了寻找水晶前往山中。她在山里遇见专攻矿���学的女研究生──荒砥凪，于是两人决定一同采集矿物。有时为了寻找水晶走在山中的道路，有时为了捡拾石榴石浸在溪水中，有时又为了寻",
+      "tags": [
+        {
+          "name": "科普",
+          "count": 2005,
+          "total_cont": 0
+        },
+        {
+          "name": "日常",
+          "count": 1959,
+          "total_cont": 0
+        },
+        {
+          "name": "StudioBind",
+          "count": 1944,
+          "total_cont": 0
+        },
+        {
+          "name": "漫画改",
+          "count": 1911,
+          "total_cont": 0
+        },
+        {
+          "name": "2025年7月",
+          "count": 1809,
+          "total_cont": 0
+        },
+        {
+          "name": "TV",
+          "count": 1545,
+          "total_cont": 0
+        },
+        {
+          "name": "矿物",
+          "count": 1374,
+          "total_cont": 0
+        },
+        {
+          "name": "轻百合",
+          "count": 835,
+          "total_cont": 0
+        },
+        {
+          "name": "2025",
+          "count": 801,
+          "total_cont": 0
+        },
+        {
+          "name": "藤井慎吾",
+          "count": 769,
+          "total_cont": 0
+        }
+      ],
+      "score": 8.1,
+      "type": 2,
+      "id": 512190,
+      "eps": 13,
+      "volumes": 0,
+      "collection_total": 24267,
+      "rank": 190
+    },
+    "subject_id": 512190,
+    "vol_status": 0,
+    "ep_status": 0,
+    "subject_type": 2,
+    "type": 1,
+    "rate": 0,
+    "private": false
+  },
+  {
+    "updated_at": "2026-06-10T16:56:10+08:00",
+    "comment": null,
+    "tags": [],
+    "subject": {
+      "date": "2025-04-08",
+      "images": {
+        "small": "https://lain.bgm.tv/r/200/pic/cover/l/6e/1a/509986_99qsc.jpg",
+        "grid": "https://lain.bgm.tv/r/100/pic/cover/l/6e/1a/509986_99qsc.jpg",
+        "large": "https://lain.bgm.tv/pic/cover/l/6e/1a/509986_99qsc.jpg",
+        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/6e/1a/509986_99qsc.jpg",
+        "common": "https://lain.bgm.tv/r/400/pic/cover/l/6e/1a/509986_99qsc.jpg"
+      },
+      "name": "アポカリプスホテル",
+      "name_cn": "末日后酒店",
+      "short_summary": "人类离开后，地球经历了漫长的岁月。\r\n位于日本首都东京银座的「银河楼」酒店，至今仍在营业中。\r\n工作人员是以酒店机器人八千代为中心，在各个部门工作的员工机器人们。\r\n它们一边等待老板的归来和再次迎接人类的时刻，一边在没有住客的酒店里专心致志",
+      "tags": [
+        {
+          "name": "原创",
+          "count": 4456,
+          "total_cont": 0
+        },
+        {
+          "name": "科幻",
+          "count": 3652,
+          "total_cont": 0
+        },
+        {
+          "name": "2025年4月",
+          "count": 2584,
+          "total_cont": 0
+        },
+        {
+          "name": "CygamesPictures",
+          "count": 2569,
+          "total_cont": 0
+        },
+        {
+          "name": "治愈",
+          "count": 2444,
+          "total_cont": 0
+        },
+        {
+          "name": "末世",
+          "count": 2444,
+          "total_cont": 0
+        },
+        {
+          "name": "TV",
+          "count": 2167,
+          "total_cont": 0
+        },
+        {
+          "name": "奇幻",
+          "count": 2075,
+          "total_cont": 0
+        },
+        {
+          "name": "日常",
+          "count": 1731,
+          "total_cont": 0
+        },
+        {
+          "name": "日本",
+          "count": 1342,
+          "total_cont": 0
+        }
+      ],
+      "score": 8.2,
+      "type": 2,
+      "id": 509986,
+      "eps": 12,
+      "volumes": 0,
+      "collection_total": 34857,
+      "rank": 142
+    },
+    "subject_id": 509986,
+    "vol_status": 0,
+    "ep_status": 0,
+    "subject_type": 2,
+    "type": 2,
+    "rate": 10,
+    "private": false
+  },
+  {
+    "updated_at": "2026-06-10T16:56:01+08:00",
+    "comment": null,
+    "tags": [],
+    "subject": {
+      "date": "2025-12-31",
+      "images": {
+        "small": "https://lain.bgm.tv/r/200/pic/cover/l/9b/f5/565802_PRfRL.jpg",
+        "grid": "https://lain.bgm.tv/r/100/pic/cover/l/9b/f5/565802_PRfRL.jpg",
+        "large": "https://lain.bgm.tv/pic/cover/l/9b/f5/565802_PRfRL.jpg",
+        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/9b/f5/565802_PRfRL.jpg",
+        "common": "https://lain.bgm.tv/r/400/pic/cover/l/9b/f5/565802_PRfRL.jpg"
+      },
+      "name": "かぐや様は告らせたい 大人への階段",
+      "name_cn": "辉夜大小姐想让我告白 通往大人的阶梯",
+      "short_summary": "\"每一处都令人怀念，而所有的一切都是无可替代的重要回忆。\" 这里是聚集秀才的精英学校——秀知院学园。在该校学生会相遇的副会长四宫辉夜与学生会长白银御行，在经历了漫长的恋爱头脑战后，终于确定了彼此关系……。时光流逝——辉夜独自在房间里翻阅着一",
+      "tags": [
+        {
+          "name": "恋爱",
+          "count": 2256,
+          "total_cont": 0
+        },
+        {
+          "name": "A-1Pictures",
+          "count": 1858,
+          "total_cont": 0
+        },
+        {
+          "name": "校园",
+          "count": 1691,
+          "total_cont": 0
+        },
+        {
+          "name": "漫画改",
+          "count": 1348,
+          "total_cont": 0
+        },
+        {
+          "name": "搞笑",
+          "count": 1197,
+          "total_cont": 0
+        },
+        {
+          "name": "OVA",
+          "count": 1191,
+          "total_cont": 0
+        },
+        {
+          "name": "2025",
+          "count": 1009,
+          "total_cont": 0
+        },
+        {
+          "name": "TV",
+          "count": 903,
+          "total_cont": 0
+        },
+        {
+          "name": "辉夜大小姐想让我告白",
+          "count": 701,
+          "total_cont": 0
+        },
+        {
+          "name": "日本",
+          "count": 552,
+          "total_cont": 0
+        }
+      ],
+      "score": 8.3,
+      "type": 2,
+      "id": 565802,
+      "eps": 2,
+      "volumes": 0,
+      "collection_total": 18108,
+      "rank": 100
+    },
+    "subject_id": 565802,
+    "vol_status": 0,
+    "ep_status": 0,
+    "subject_type": 2,
+    "type": 2,
+    "rate": 10,
+    "private": false
+  },
+  {
+    "updated_at": "2026-06-10T16:55:53+08:00",
+    "comment": null,
+    "tags": [],
+    "subject": {
+      "date": "2025-09-19",
+      "images": {
+        "small": "https://lain.bgm.tv/r/200/pic/cover/l/e0/d8/470660_uLY5M.jpg",
+        "grid": "https://lain.bgm.tv/r/100/pic/cover/l/e0/d8/470660_uLY5M.jpg",
+        "large": "https://lain.bgm.tv/pic/cover/l/e0/d8/470660_uLY5M.jpg",
+        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/e0/d8/470660_uLY5M.jpg",
+        "common": "https://lain.bgm.tv/r/400/pic/cover/l/e0/d8/470660_uLY5M.jpg"
+      },
+      "name": "劇場版 チェンソーマン レゼ篇",
+      "name_cn": "剧场版 链锯人 蕾塞篇",
+      "short_summary": "世界が熱狂するチェンソーマン、初の映画化！\r\n\r\n絶大な人気を誇るエピソード“レゼ篇”が、ついにスクリーンへ\r\n\r\n原作はシリーズ累計発行部数3,000万部を突破し、\r\n現在「少年ジャンプ+」(集英社)で人気連載中の漫画『チェンソーマン』。",
+      "tags": [
+        {
+          "name": "剧场版",
+          "count": 3528,
+          "total_cont": 0
+        },
+        {
+          "name": "MAPPA",
+          "count": 2497,
+          "total_cont": 0
+        },
+        {
+          "name": "藤本树",
+          "count": 2111,
+          "total_cont": 0
+        },
+        {
+          "name": "漫画改",
+          "count": 1910,
+          "total_cont": 0
+        },
+        {
+          "name": "战斗",
+          "count": 1833,
+          "total_cont": 0
+        },
+        {
+          "name": "2025",
+          "count": 1589,
+          "total_cont": 0
+        },
+        {
+          "name": "电锯人",
+          "count": 1111,
+          "total_cont": 0
+        },
+        {
+          "name": "日本",
+          "count": 987,
+          "total_cont": 0
+        },
+        {
+          "name": "漫改",
+          "count": 799,
+          "total_cont": 0
+        },
+        {
+          "name": "热血",
+          "count": 587,
+          "total_cont": 0
+        }
+      ],
+      "score": 8.4,
+      "type": 2,
+      "id": 470660,
+      "eps": 1,
+      "volumes": 0,
+      "collection_total": 25084,
+      "rank": 73
+    },
+    "subject_id": 470660,
+    "vol_status": 0,
+    "ep_status": 0,
+    "subject_type": 2,
+    "type": 2,
+    "rate": 10,
+    "private": false
+  },
+  {
     "updated_at": "2026-06-10T15:08:08+08:00",
     "comment": null,
     "tags": [],
@@ -102,12 +1782,12 @@
       "tags": [
         {
           "name": "动画工房",
-          "count": 1583,
+          "count": 1582,
           "total_cont": 0
         },
         {
           "name": "漫画改",
-          "count": 1372,
+          "count": 1371,
           "total_cont": 0
         },
         {
@@ -117,22 +1797,22 @@
         },
         {
           "name": "偶像",
-          "count": 1203,
+          "count": 1202,
           "total_cont": 0
         },
         {
           "name": "TV",
-          "count": 1079,
+          "count": 1078,
           "total_cont": 0
         },
         {
           "name": "恋爱",
-          "count": 1039,
+          "count": 1038,
           "total_cont": 0
         },
         {
           "name": "悬疑",
-          "count": 871,
+          "count": 870,
           "total_cont": 0
         },
         {
@@ -142,7 +1822,7 @@
         },
         {
           "name": "2026",
-          "count": 589,
+          "count": 588,
           "total_cont": 0
         },
         {
@@ -182,7 +1862,7 @@
       },
       "name": "わたしが恋人になれるわけないじゃん、ムリムリ!（※ムリじゃなかった!?）〜ネクストシャイン！〜",
       "name_cn": "我们不可能成为恋人！绝对不行。 (※似乎可行？) 〜再次闪耀！〜",
-      "short_summary": "わたしはわたしを、好きになりたいから！\r\n陰キャでダメダメだった過去を捨て、高校デビューを果たした少女、 甘織れな子。\r\n運よくカー���トトップの陽キャグループに\r\n入ったと思いきや、\r\n何とその中の二人から告白されちゃった！？\r\n\r\n学園の",
+      "short_summary": "わたしはわたしを、好きになりたいから！\r\n陰キャでダメダメだった過去を捨て、高校デビューを果たした少女、 甘織れな子。\r\n運よくカーストトップの陽キャグループに\r\n入ったと思いきや、\r\n何とその中の二人から告白されちゃった！？\r\n\r\n学園の",
       "tags": [
         {
           "name": "百合",
@@ -240,7 +1920,7 @@
       "id": 587454,
       "eps": 5,
       "volumes": 0,
-      "collection_total": 14361,
+      "collection_total": 14363,
       "rank": 1376
     },
     "subject_id": 587454,
@@ -324,7 +2004,7 @@
       "id": 443831,
       "eps": 13,
       "volumes": 0,
-      "collection_total": 23496,
+      "collection_total": 23499,
       "rank": 1300
     },
     "subject_id": 443831,
@@ -408,7 +2088,7 @@
       "id": 515759,
       "eps": 10,
       "volumes": 0,
-      "collection_total": 32169,
+      "collection_total": 32172,
       "rank": 936
     },
     "subject_id": 515759,
@@ -477,7 +2157,7 @@
           "total_cont": 0
         },
         {
-          "name": "2026年4月",
+          "name": "2026年4��",
           "count": 282,
           "total_cont": 0
         },
@@ -561,7 +2241,7 @@
           "total_cont": 0
         },
         {
-          "name": "日��",
+          "name": "日本",
           "count": 621,
           "total_cont": 0
         },
@@ -576,7 +2256,7 @@
       "id": 525565,
       "eps": 12,
       "volumes": 0,
-      "collection_total": 18633,
+      "collection_total": 18637,
       "rank": 571
     },
     "subject_id": 525565,
@@ -660,7 +2340,7 @@
       "id": 548818,
       "eps": 9,
       "volumes": 0,
-      "collection_total": 14784,
+      "collection_total": 14788,
       "rank": 482
     },
     "subject_id": 548818,
@@ -744,7 +2424,7 @@
       "id": 472741,
       "eps": 12,
       "volumes": 0,
-      "collection_total": 15342,
+      "collection_total": 15344,
       "rank": 312
     },
     "subject_id": 472741,
@@ -774,7 +2454,7 @@
       "tags": [
         {
           "name": "治愈",
-          "count": 1658,
+          "count": 1659,
           "total_cont": 0
         },
         {
@@ -798,7 +2478,7 @@
           "total_cont": 0
         },
         {
-          "name": "��艺",
+          "name": "文艺",
           "count": 914,
           "total_cont": 0
         },
@@ -828,7 +2508,7 @@
       "id": 493016,
       "eps": 13,
       "volumes": 0,
-      "collection_total": 16598,
+      "collection_total": 16602,
       "rank": 65
     },
     "subject_id": 493016,
@@ -854,41 +2534,41 @@
       },
       "name": "Re:ゼロから始める異世界生活 4th season 喪失編",
       "name_cn": "Re：从零开始的异世界生活 第四季 丧失篇",
-      "short_summary": "在水门都市朴利斯提拉的死战中，昴等人虽然勉强取得胜利，但付出的代价，却过于沉重。因「暴食」权能而陷入沉睡的雷姆，被夺走记忆的库珥修，以及，被夺去名字的由里乌斯。\r\n为了寻找拯救他们的线索，昴得知了一位据说能看透一切、拥有无尽知识的��在——「",
+      "short_summary": "在水门都市朴利斯提拉的死战中，昴等人虽然勉强取得胜利，但付出的代价，却过于沉重。因「暴食」权能而陷入沉睡的雷姆，被夺走记忆的库珥修，以及，被夺去名字的由里乌斯。\r\n为了寻找拯救他们的线索，昴得知了一位据说能看透一切、拥有无尽知识的存在——「",
       "tags": [
         {
           "name": "异世界",
-          "count": 739,
+          "count": 740,
           "total_cont": 0
         },
         {
           "name": "2026年4月",
-          "count": 704,
+          "count": 705,
           "total_cont": 0
         },
         {
           "name": "奇幻",
-          "count": 578,
+          "count": 579,
           "total_cont": 0
         },
         {
           "name": "战斗",
-          "count": 520,
+          "count": 521,
           "total_cont": 0
         },
         {
           "name": "WHITEFOX",
-          "count": 517,
+          "count": 518,
           "total_cont": 0
         },
         {
           "name": "TV",
-          "count": 494,
+          "count": 495,
           "total_cont": 0
         },
         {
           "name": "轻小说改",
-          "count": 462,
+          "count": 463,
           "total_cont": 0
         },
         {
@@ -903,7 +2583,7 @@
         },
         {
           "name": "冒险",
-          "count": 271,
+          "count": 272,
           "total_cont": 0
         }
       ],
@@ -912,7 +2592,7 @@
       "id": 547888,
       "eps": 11,
       "volumes": 0,
-      "collection_total": 11686,
+      "collection_total": 11700,
       "rank": 791
     },
     "subject_id": 547888,
@@ -942,7 +2622,7 @@
       "tags": [
         {
           "name": "百合",
-          "count": 2146,
+          "count": 2149,
           "total_cont": 0
         },
         {
@@ -952,22 +2632,22 @@
         },
         {
           "name": "漫画改",
-          "count": 1291,
+          "count": 1293,
           "total_cont": 0
         },
         {
           "name": "日常",
-          "count": 1260,
+          "count": 1262,
           "total_cont": 0
         },
         {
           "name": "TV",
-          "count": 1106,
+          "count": 1107,
           "total_cont": 0
         },
         {
           "name": "Soigne",
-          "count": 830,
+          "count": 831,
           "total_cont": 0
         },
         {
@@ -977,12 +2657,12 @@
         },
         {
           "name": "2026",
-          "count": 621,
+          "count": 622,
           "total_cont": 0
         },
         {
           "name": "吉成钢",
-          "count": 594,
+          "count": 595,
           "total_cont": 0
         },
         {
@@ -996,7 +2676,7 @@
       "id": 543360,
       "eps": 12,
       "volumes": 0,
-      "collection_total": 17706,
+      "collection_total": 17719,
       "rank": 964
     },
     "subject_id": 543360,
@@ -1026,12 +2706,12 @@
       "tags": [
         {
           "name": "百合",
-          "count": 6033,
+          "count": 6034,
           "total_cont": 0
         },
         {
           "name": "剧场版",
-          "count": 4803,
+          "count": 4804,
           "total_cont": 0
         },
         {
@@ -1041,12 +2721,12 @@
         },
         {
           "name": "音乐",
-          "count": 3638,
+          "count": 3639,
           "total_cont": 0
         },
         {
           "name": "科幻",
-          "count": 3014,
+          "count": 3016,
           "total_cont": 0
         },
         {
@@ -1056,12 +2736,12 @@
         },
         {
           "name": "2026年1月",
-          "count": 2309,
+          "count": 2310,
           "total_cont": 0
         },
         {
           "name": "日本",
-          "count": 2076,
+          "count": 2077,
           "total_cont": 0
         },
         {
@@ -1080,7 +2760,7 @@
       "id": 604826,
       "eps": 1,
       "volumes": 0,
-      "collection_total": 39709,
+      "collection_total": 39717,
       "rank": 185
     },
     "subject_id": 604826,

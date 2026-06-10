@@ -5,8 +5,7 @@
 
 const fs = require('fs');
 const https = require('https');
-let HttpsProxyAgent;
-try { HttpsProxyAgent = require('https-proxy-agent').HttpsProxyAgent; } catch(e) { HttpsProxyAgent = null; }
+const { HttpsProxyAgent } = require('https-proxy-agent');
 
 const USER_ID = 1221444;
 const OUTPUT = 'data/bangumi.json';
