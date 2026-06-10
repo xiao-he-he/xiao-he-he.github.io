@@ -56,7 +56,7 @@ function parseTrackName(filename) {
 // 生成新的 tracks 数组代码
 const tracksData = musicFiles.map(f => {
   const { title, artist } = parseTrackName(f);
-  return `{file:'music/${f}',title:'${title.replace(/'/g, "\\'")}',artist:'${artist.replace(/'/g, "\\'")}'}`;
+  return `{file:${JSON.stringify('music/'+f)},title:${JSON.stringify(title)},artist:${JSON.stringify(artist)}}`;
 });
 
 const newTracksCode = 'const t=[' + tracksData.join(',') + '];';
