@@ -65,7 +65,7 @@ const newTracksCode = 'const t=[' + tracksData.join(',') + '];';
 let html = fs.readFileSync(HTML_FILE, 'utf-8');
 
 // 替换音乐 tracks 数组
-const musicRegex = /const t=\[\{file:'music\/[^]]+?\];/s;
+const musicRegex = /const t=\[\{file:'music\/[\s\S]+?\];/;
 if (musicRegex.test(html)) {
   const oldMatch = html.match(musicRegex)[0];
   const oldCount = (oldMatch.match(/\{file:/g) || []).length;
