@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>萧和和 · 个人档案系统</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════
+   ROOT — 云层虹彩色调（保持满意方向）
+   ═══════════════════════════════════════════ */
+:root {
+  --sky: #86B6D8; --sky-light: #90BADD; --mist: #EEF3FA;
+  --pearl: #F7F8FB; --cloud-line: #929AB5; --shadow-blue: #495A80;
+  --violet-blue: #7082B7; --soft-violet: #8A96CC;
+  --lavender-pink: #BFA0C2; --peach: #E7C0C1;
+  --sun-cream: #FAEBB1; --sun-glow: #FFE6A8; --aqua-glint: #9EEAD8;
+  --ink: #1C2340; --ink-light: #353F5A; --ink-muted: #5B6582;
+  --hud-glass: rgba(247,248,251,0.58);
+  --hud-border: rgba(182,188,209,0.45);
+  --hud-shadow: 0 16px 56px rgba(109,123,173,0.16);
+  --signal-lime: #A9D979; --signal-blue: #1B3BEC; --signal-orange: #FF6A2A;
+  --font-display: 'Noto Serif SC','STSong',serif;
+  --font-body: 'Noto Sans SC',-apple-system,sans-serif;
+  --font-mono: 'JetBrains Mono','Consolas',monospace;
+  --ease: cubic-bezier(0.4,0,0.2,1);
+}
+
+/* ═══════════════════════════════════════════
+   RESET & BASE
+   ═══════════════════════════════════════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:20px;-webkit-font-smoothing:antialiased}
+body{
+  font-family:var(--font-body);font-weight:300;line-height:1.8;
+  color:var(--ink);min-height:100vh;overflow-x:hidden;
+  background:
+    radial-gradient(ellipse 1000px 700px at 58% 28%,rgba(250,235,177,.48),transparent 55%),
+    radial-gradient(ellipse 700px 600px at 35% 42%,rgba(158,234,216,.22),transparent 48%),
+    radial-gradient(ellipse 600px 500px at 48% 28%,rgba(231,192,193,.28),transparent 42%),
+    radial-gradient(ellipse 900px 800px at 28% 68%,rgba(138,150,204,.22),transparent 58%),
+    radial-gradient(ellipse 1100px 900px at 68% 78%,rgba(112,130,183,.18),transparent 62%),
+    linear-gradient(180deg,#90BADD 0%,#EEF3FA 36%,#D5DBEC 68%,#B6BCD1 100%);
+  background-attachment:fixed;
+}
+a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+
+/* 背景网格 — 透视感（远处密，近处疏） */
+body::before{
+  content:'';position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.05;
+  background:
+    repeating-linear-gradient(0deg,transparent,transparent 24px,rgba(57,66,95,.35) 25px),
+    repeating-linear-gradient(90deg,transparent,transparent 24px,rgba(57,66,95,.35) 25px);
+  background-size:48px 48px,48px 48px;
+  mask-image:linear-gradient(180deg,rgba(0,0,0,.15) 0%,rgba(0,0,0,.5) 50%,rgba(0,0,0,.8) 100%);
+  -webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,.15) 0%,rgba(0,0,0,.5) 50%,rgba(0,0,0,.8) 100%);
+}
+/* 全局噪点 */
+body::after{
+  content:'';position:fixed;inset:0;z-index:99999;pointer-events:none;opacity:.028;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.78' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ═══════════════════════════════════════════
+   NAV — 系统状态栏
+   ═══════════════════════════════════════════ */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(238,243,250,.76);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(182,188,209,.32);
+}
+.nav-inner{
+  max-width:1320px;margin:0 auto;padding:0 40px;
+  display:flex;align-items:center;justify-content:space-between;height:48px;
+}
+.nav-id{
+  display:flex;align-items:center;gap:8px;
+  font-family:var(--font-mono);font-size:.66rem;letter-spacing:.08em;
+  color:var(--ink-light);
+}
+.nav-id-dot{width:5px;height:5px;border-radius:50%;background:var(--signal-lime);box-shadow:0 0 5px var(--signal-lime)}
+.nav-id-zh{font-size:.72rem;margin-left:6px;font-family:var(--font-body);letter-spacing:.04em}
+.nav-links{display:flex;gap:24px;align-items:center}
+.nav-links a{
+  font-family:var(--font-mono);font-size:.64rem;letter-spacing:.1em;
+  color:var(--ink-light);padding:2px 0;position:relative;
+}
+.nav-links a::after{
+  content:'';position:absolute;bottom:-2px;left:0;width:0;height:1.5px;
+  background:var(--shadow-blue);transition:width .3s var(--ease);
+}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+
+/* ═══════════════════════════════════════════
+   HERO — 空间化档案主控台
+   ═══════════════════════════════════════════ */
+.hero{
+  min-height:100vh;display:flex;align-items:center;
+  padding:80px 40px 48px;position:relative;z-index:1;
+  max-width:1320px;margin:0 auto;
+}
+/* 巨型低透明圆环 */
+.hero-giant-ring{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:620px;height:620px;border-radius:50%;
+  border:1px solid rgba(182,188,209,.22);
+  pointer-events:none;z-index:0;
+  animation:ring-rotate 50s linear infinite;
+}
+.hero-giant-ring::before{
+  content:'';position:absolute;inset:40px;border-radius:50%;
+  border:1px dashed rgba(182,188,209,.14);
+}
+@keyframes ring-rotate{to{transform:translate(-50%,-50%) rotate(360deg)}}
+/* 斜向轨道线 */
+.hero-orbit{
+  position:absolute;top:15%;left:-5%;width:50%;height:2px;
+  background:linear-gradient(90deg,transparent,rgba(158,234,216,.24),rgba(250,235,177,.18),transparent);
+  transform:rotate(22deg);pointer-events:none;z-index:0;
+}
+/* 扫描线 */
+.hero-scan{
+  position:absolute;top:40%;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(158,234,216,.45),transparent);
+  pointer-events:none;z-index:0;
+}
+.hero-grid-layout{
+  display:grid;grid-template-columns:260px 1fr;gap:60px;
+  align-items:start;width:100%;position:relative;z-index:1;
+}
+
+/* 左：头像档案舱 */
+.hero-profile{display:flex;flex-direction:column;align-items:flex-start;gap:14px;position:relative}
+/* 双层圆环 + 缺口 */
+.hero-avatar-chamber{position:relative;width:172px;height:172px}
+.hero-avatar-ring-outer{
+  position:absolute;inset:-14px;border-radius:50%;
+  border:2px solid var(--cloud-line);
+  clip-path:circle(50%); /* 完整环 */
+}
+.hero-avatar-ring-outer::after{
+  content:'';position:absolute;top:8px;right:8px;width:10px;height:10px;
+  border-radius:50%;background:var(--signal-lime);
+  box-shadow:0 0 8px var(--signal-lime);border:2px solid var(--pearl);
+}
+.hero-avatar-ring-inner{
+  position:absolute;inset:-6px;border-radius:50%;
+  border:1px dashed rgba(182,188,209,.5);
+}
+/* 环顶标签 */
+.hero-avatar-label{
+  position:absolute;top:-22px;left:50%;transform:translateX(-50%);
+  font-family:var(--font-mono);font-size:.54rem;letter-spacing:.12em;
+  color:var(--shadow-blue);background:var(--pearl);padding:2px 8px;
+  white-space:nowrap;z-index:3;
+}
+.hero-avatar{
+  width:172px;height:172px;border-radius:50%;object-fit:cover;
+  position:relative;z-index:2;
+  box-shadow:0 8px 36px rgba(109,123,173,.28);
+}
+.hero-profile-tags{display:flex;flex-wrap:wrap;gap:4px}
+.hero-st{
+  font-family:var(--font-mono);font-size:.56rem;letter-spacing:.1em;
+  padding:3px 7px;border:1px solid var(--cloud-line);color:var(--shadow-blue);
+}
+.hero-st.online{border-color:var(--signal-lime);color:#5A8A3C}
+
+/* 右：姓名 + 入口面板组 */
+.hero-main{display:flex;flex-direction:column;gap:20px;position:relative}
+/* 姓名 — 背后低透明英文水印 */
+.hero-name-wrap{position:relative}
+.hero-name-ghost{
+  position:absolute;top:-16px;left:-8px;
+  font-family:var(--font-mono);font-size:3.5rem;font-weight:500;
+  letter-spacing:.06em;color:rgba(112,130,183,.08);
+  pointer-events:none;white-space:nowrap;z-index:0;
+}
+.hero-name{
+  font-family:var(--font-display);font-size:4.8rem;font-weight:900;
+  letter-spacing:-.02em;line-height:1;position:relative;z-index:1;
+}
+.hero-name::after{
+  content:'';position:absolute;top:50%;left:15%;width:55%;height:50%;
+  background:radial-gradient(ellipse,rgba(250,235,177,.36),transparent 65%);
+  z-index:-1;transform:translateY(-50%);pointer-events:none;
+}
+.hero-role{
+  font-size:.88rem;color:var(--ink-light);letter-spacing:.04em;
+}
+.hero-role-sub{
+  font-family:var(--font-mono);font-size:.64rem;letter-spacing:.08em;
+  color:var(--shadow-blue);display:block;margin-top:4px;
+}
+.hero-bio{
+  font-size:.86rem;color:var(--ink-light);line-height:2;
+  max-width:500px;
+}
+
+/* 入口面板 — 异形 + 大小不同 + 错位 */
+.hero-panels{
+  display:grid;grid-template-columns:1.35fr 1fr .8fr 1fr;gap:10px;
+  margin-top:4px;
+}
+.hero-panel{
+  background:var(--hud-glass);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border:1px solid var(--hud-border);padding:14px 16px;position:relative;
+  transition:all .35s var(--ease);cursor:pointer;overflow:visible;
+  /* 微切角 */
+  clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px));
+}
+/* 触星主入口 — 倾斜悬浮 */
+.hero-panel.main{
+  grid-column:1;grid-row:1/3;
+  transform:perspective(800px) rotateY(-5deg) rotateX(2deg);
+  background:rgba(247,248,251,.72);border-color:rgba(250,235,177,.4);
+  box-shadow:0 12px 40px rgba(109,123,173,.14);
+}
+.hero-panel:nth-child(2){transform:translateY(-8px)}
+.hero-panel:nth-child(3){transform:translateY(4px)}
+.hero-panel:nth-child(4){transform:translateY(-4px)}
+.hero-panel:hover{
+  background:rgba(247,248,251,.86);border-color:var(--sun-cream);
+  box-shadow:var(--hud-shadow);z-index:5;
+}
+.hero-panel.main:hover{transform:perspective(800px) rotateY(-5deg) rotateX(2deg) translateZ(8px)}
+/* 面板 L 角标 */
+.hero-panel::before{
+  content:'';position:absolute;top:0;right:0;width:14px;height:14px;
+  border-left:1px solid var(--cloud-line);border-bottom:1px solid var(--cloud-line);opacity:.4;
+  transition:opacity .3s,border-color .3s;
+}
+.hero-panel:hover::before{opacity:.8;border-color:var(--sun-cream)}
+.hero-panel-num{
+  font-family:var(--font-mono);font-size:.54rem;letter-spacing:.12em;
+  color:var(--shadow-blue);
+}
+.hero-panel-zh{font-size:.82rem;font-weight:500;margin:3px 0 1px}
+.hero-panel-en{font-family:var(--font-mono);font-size:.52rem;letter-spacing:.08em;color:var(--cloud-line)}
+.hero-panel-status{
+  margin-top:6px;display:flex;align-items:center;gap:4px;
+  font-family:var(--font-mono);font-size:.52rem;letter-spacing:.08em;
+}
+.hero-panel-dot{width:4px;height:4px;border-radius:50%}
+.hero-panel-dot.on{background:var(--signal-lime)}
+.hero-panel-dot.wip{background:var(--sun-cream)}
+.hero-panel-arrow{margin-left:auto;font-size:.64rem;color:var(--cloud-line);transition:transform .3s}
+.hero-panel:hover .hero-panel-arrow{transform:translateX(3px);color:var(--shadow-blue)}
+
+/* Hero 底部坐标 */
+.hero-coords{
+  position:absolute;font-family:var(--font-mono);font-size:.52rem;
+  letter-spacing:.08em;color:var(--cloud-line);pointer-events:none;opacity:.45;z-index:0;
+}
+.hero-coords.tl{top:16px;left:20px}.hero-coords.tr{top:16px;right:20px}.hero-coords.br{bottom:16px;right:20px}
+
+/* 漂浮小方块 */
+.hero-float-block{
+  position:absolute;pointer-events:none;z-index:0;
+  background:rgba(247,248,251,.38);border:1px solid rgba(182,188,209,.18);
+}
+.hero-float-block.a{top:18%;right:8%;width:32px;height:32px;transform:rotate(15deg)}
+.hero-float-block.b{top:55%;right:18%;width:20px;height:20px;transform:rotate(-10deg)}
+.hero-float-block.c{bottom:22%;left:5%;width:24px;height:24px;transform:rotate(25deg)}
+
+/* ═══════════════════════════════════════════
+   SECTION SHARED
+   ═══════════════════════════════════════════ */
+.section{max-width:1320px;margin:0 auto;padding:100px 40px;position:relative;z-index:1}
+.section-hdr{margin-bottom:48px}
+.section-id{
+  font-family:var(--font-mono);font-size:.58rem;letter-spacing:.14em;
+  color:var(--shadow-blue);display:flex;align-items:center;gap:8px;
+}
+.section-id::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--cloud-line),transparent);max-width:60px}
+.section-hdr h2{font-family:var(--font-display);font-size:2rem;font-weight:900;letter-spacing:.02em;margin-top:4px}
+.section-sub{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.1em;color:var(--cloud-line);margin-top:2px}
+
+/* ═══════════════════════════════════════════
+   ARTICLES — 档案墙 Case Board
+   ═══════════════════════════════════════════ */
+.articles-board{
+  position:relative;background:rgba(247,248,251,.38);
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+  border:1px solid var(--hud-border);padding:28px;
+}
+/* 底板背景巨型 CASE FILE */
+.articles-board::before{
+  content:'案例档案';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  font-family:var(--font-display);font-size:10rem;font-weight:900;
+  color:rgba(109,123,173,.025);pointer-events:none;z-index:0;
+  white-space:nowrap;
+}
+.articles-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:16px;position:relative;z-index:1;
+}
+.article-case{
+  background:var(--panel-light);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+  border:1px solid var(--hud-border);padding:32px 28px;position:relative;
+  transition:all .35s var(--ease);
+  /* 切角 */
+  clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,12px 100%,0 calc(100% - 12px));
+}
+/* 错位 */
+.article-case:nth-child(1){transform:translateY(-6px)}
+.article-case:nth-child(2){transform:translateY(8px)}
+.article-case:nth-child(3){grid-column:1/-1;clip-path:polygon(0 0,calc(100% - 20px) 0,100% 20px,100% 100%,0 100%)}
+.article-case:hover{transform:translateY(-10px);box-shadow:var(--hud-shadow);border-color:var(--sun-cream);z-index:3}
+.article-case:nth-child(1):hover{transform:translateY(-10px)}
+.article-case:nth-child(2):hover{transform:translateY(0)}
+/* 档案 L 角标 */
+.article-case::before{
+  content:'';position:absolute;top:0;right:0;width:16px;height:16px;
+  border-left:1px solid var(--cloud-line);border-bottom:1px solid var(--cloud-line);
+  opacity:.3;transition:opacity .3s,border-color .3s;
+}
+.article-case:hover::before{opacity:.7;border-color:var(--sun-cream)}
+/* 大号水印编号 */
+.article-case-num{
+  font-family:var(--font-mono);font-size:4rem;font-weight:500;
+  color:rgba(109,123,173,.05);position:absolute;top:6px;right:16px;
+  pointer-events:none;line-height:1;
+  clip-path:inset(0 0 0 0);/* 部分被裁切，越界效果 */
+}
+.article-case-id{
+  font-family:var(--font-mono);font-size:.56rem;letter-spacing:.12em;
+  color:var(--shadow-blue);margin-bottom:10px;
+}
+.article-case h3{font-family:var(--font-display);font-size:1.25rem;font-weight:700;margin-bottom:6px;position:relative;z-index:1}
+.article-case p{font-size:.82rem;color:var(--ink-light);line-height:1.8;margin-bottom:16px;max-width:360px}
+.article-case-meta{
+  display:flex;gap:10px;flex-wrap:wrap;
+  font-family:var(--font-mono);font-size:.56rem;letter-spacing:.08em;color:var(--cloud-line);
+}
+.article-case-link{
+  display:inline-flex;align-items:center;gap:6px;margin-top:14px;
+  font-family:var(--font-mono);font-size:.62rem;letter-spacing:.08em;
+  color:var(--shadow-blue);border-bottom:1px solid var(--cloud-line);
+  padding-bottom:2px;transition:all .25s;
+}
+.article-case-link:hover{border-color:var(--sun-cream);color:var(--ink)}
+
+/* ═══════════════════════════════════════════
+   触星 — 等距星图沙盘
+   ═══════════════════════════════════════════ */
+.touchstar-scene{
+  position:relative;padding:40px;
+  background:rgba(247,248,251,.42);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  border:1px solid var(--hud-border);
+  overflow:hidden;min-height:380px;
+}
+/* 轨道圆环 */
+.touchstar-orbit{
+  position:absolute;top:50%;right:15%;transform:translateY(-50%);
+  width:300px;height:300px;border-radius:50%;
+  border:1px solid rgba(158,234,216,.15);
+  pointer-events:none;z-index:0;
+}
+.touchstar-orbit::before{
+  content:'';position:absolute;inset:50px;border-radius:50%;
+  border:1px dashed rgba(182,188,209,.12);
+}
+/* 星图节点 */
+.touchstar-node{
+  position:absolute;width:6px;height:6px;border-radius:50%;
+  background:var(--sun-cream);pointer-events:none;z-index:1;
+}
+.touchstar-node.a{top:30%;right:25%}.touchstar-node.b{top:55%;right:40%}.touchstar-node.c{top:45%;right:18%}
+/* 等距平台 — 触星沙盘底板 */
+.touchstar-platform{
+  position:absolute;bottom:-20px;right:8%;width:340px;height:340px;
+  background:linear-gradient(135deg,rgba(138,150,204,.08),rgba(158,234,216,.06));
+  border:1px solid rgba(182,188,209,.14);
+  transform:perspective(800px) rotateX(58deg) rotateZ(-8deg);
+  clip-path:polygon(5% 0,100% 0,95% 100%,0 100%);
+  pointer-events:none;z-index:0;
+}
+/* 内容 */
+.touchstar-content{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+.ts-info{}
+.ts-id{
+  font-family:var(--font-mono);font-size:.56rem;letter-spacing:.12em;
+  color:var(--signal-lime);margin-bottom:6px;
+}
+.ts-info h3{font-family:var(--font-display);font-size:2.6rem;font-weight:900;letter-spacing:.04em;margin-bottom:2px}
+.ts-sub{font-family:var(--font-mono);font-size:.58rem;letter-spacing:.1em;color:var(--cloud-line);margin-bottom:16px}
+.ts-desc{font-size:.84rem;color:var(--ink-light);line-height:2}
+.ts-desc p+p{margin-top:10px}
+.ts-cta{
+  display:inline-flex;align-items:center;gap:8px;margin-top:18px;
+  padding:8px 20px;background:linear-gradient(135deg,var(--sun-cream),var(--peach));
+  font-family:var(--font-mono);font-size:.62rem;letter-spacing:.08em;
+  color:var(--ink);transition:all .3s;cursor:pointer;
+}
+.ts-cta:hover{box-shadow:0 8px 28px rgba(250,235,177,.42)}
+/* 数据模块 — 漂浮在不同深度 */
+.ts-data{position:relative;display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-end}
+.ts-dm{
+  background:var(--hud-glass);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  border:1px solid var(--hud-border);padding:18px 22px;text-align:center;
+  transition:transform .35s var(--ease);
+  clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,8px 100%,0 calc(100% - 8px));
+}
+.ts-dm:nth-child(1){transform:translateY(-8px) translateZ(0)}
+.ts-dm:nth-child(2){transform:translateY(12px) scale(.94);opacity:.88}
+.ts-dm:nth-child(3){transform:translateY(-18px) scale(1.06)}
+.ts-dm:nth-child(4){transform:translateY(4px) scale(.9);opacity:.85}
+.ts-dm:hover{transform:translateY(-24px)!important;box-shadow:var(--hud-shadow);z-index:5;opacity:1!important}
+.ts-dm-num{font-family:var(--font-display);font-size:2.2rem;font-weight:900;color:var(--shadow-blue)}
+.ts-dm-label{font-family:var(--font-mono);font-size:.54rem;letter-spacing:.1em;color:var(--cloud-line);margin-top:4px}
+
+/* ═══════════════════════════════════════════
+   BANGUMI — 媒体档案
+   ═══════════════════════════════════════════ */
+.bgm-tabs{display:flex;gap:0;margin-bottom:24px;border-bottom:1px solid var(--cloud-line)}
+.bgm-tab{
+  font-family:var(--font-mono);font-size:.68rem;letter-spacing:.08em;
+  color:var(--cloud-line);padding:7px 16px;cursor:pointer;
+  border:none;background:none;position:relative;transition:color .25s;
+  clip-path:polygon(0 0,calc(100% - 6px) 0,100% 6px,100% 100%,0 100%);
+}
+.bgm-tab.active{color:var(--ink);background:rgba(247,248,251,.4)}
+.bgm-tab.active::after{content:'';position:absolute;bottom:-1px;left:0;width:100%;height:2px;background:var(--shadow-blue)}
+.bgm-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.bgm-item{
+  background:var(--panel-light);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
+  border:1px solid var(--hud-border);overflow:hidden;
+  transition:transform .3s var(--ease);position:relative;
+}
+.bgm-item:hover{transform:translateY(-4px);box-shadow:var(--hud-shadow);z-index:2}
+/* 卡片 L 角 */
+.bgm-item::before{
+  content:'';position:absolute;top:0;right:0;width:10px;height:10px;
+  border-left:1px solid var(--cloud-line);border-bottom:1px solid var(--cloud-line);
+  opacity:.25;z-index:2;transition:opacity .3s;
+}
+.bgm-item:hover::before{opacity:.6;border-color:var(--aqua-glint)}
+.bgm-cover{width:100%;aspect-ratio:3/4;object-fit:cover;background:#D5DBEC}
+.bgm-info{padding:10px 12px}
+.bgm-title{font-size:.78rem;font-weight:500;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.bgm-meta{display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:.58rem;color:var(--cloud-line);letter-spacing:.06em;margin-top:4px}
+.bgm-rate{color:var(--sun-cream)}
+.bgm-empty{grid-column:1/-1;text-align:center;padding:80px 0;color:var(--cloud-line);font-size:.86rem}
+
+/* ═══════════════════════════════════════════
+   CONTACT — 通信终端
+   ═══════════════════════════════════════════ */
+.contact-terminal{
+  position:relative;display:grid;grid-template-columns:1.4fr 1fr;gap:2px;
+  background:rgba(182,188,209,.24);
+}
+/* 背景雷达环 */
+.contact-terminal::before{
+  content:'';position:absolute;top:50%;right:10%;transform:translateY(-50%);
+  width:180px;height:180px;border-radius:50%;
+  border:1px solid rgba(158,234,216,.12);pointer-events:none;z-index:0;
+}
+.contact-terminal::after{
+  content:'';position:absolute;top:50%;right:10%;transform:translateY(-50%);
+  width:120px;height:120px;border-radius:50%;
+  border:1px dashed rgba(182,188,209,.1);pointer-events:none;z-index:0;
+}
+/* 主邮箱 */
+.contact-main{
+  background:var(--panel-light);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  padding:36px;position:relative;z-index:1;
+  clip-path:polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,0 100%);
+  transition:all .3s;
+}
+.contact-main:hover{background:rgba(247,248,251,.86)}
+.contact-main-label{
+  font-family:var(--font-mono);font-size:.56rem;letter-spacing:.14em;
+  color:var(--signal-lime);margin-bottom:8px;
+}
+.contact-main-value{font-size:1rem}
+.contact-main-value:hover{color:var(--sun-cream)}
+.contact-main-desc{font-size:.72rem;color:var(--cloud-line);margin-top:4px}
+/* 次级模块列 */
+.contact-secondary{display:flex;flex-direction:column;gap:2px;background:rgba(182,188,209,.24);position:relative;z-index:1}
+.contact-sec{
+  flex:1;background:var(--panel-light);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  padding:20px 24px;display:flex;flex-direction:column;justify-content:center;
+  transition:all .3s;position:relative;
+}
+.contact-sec:hover{background:rgba(247,248,251,.86)}
+.contact-sec::before{
+  content:'';position:absolute;top:0;right:0;width:10px;height:10px;
+  border-left:1px solid var(--cloud-line);border-bottom:1px solid var(--cloud-line);opacity:.3;
+}
+.contact-sec-label{font-family:var(--font-mono);font-size:.54rem;letter-spacing:.12em;color:var(--shadow-blue);margin-bottom:4px}
+.contact-sec-value{font-size:.84rem;transition:color .25s}
+.contact-sec-value:hover{color:var(--aqua-glint)}
+/* 命令行视觉 */
+.contact-cli{
+  font-family:var(--font-mono);font-size:.6rem;letter-spacing:.06em;
+  color:var(--cloud-line);margin-top:12px;opacity:.6;
+}
+
+/* ═══════════════════════════════════════════
+   MUSIC HUD — 底部增强播放器
+   ═══════════════════════════════════════════ */
+.music-hud{
+  position:fixed;bottom:0;left:0;right:0;z-index:90;
+  background:rgba(238,243,250,.78);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-top:1px solid var(--hud-border);
+  padding:5px 20px;display:flex;align-items:center;gap:10px;
+  font-family:var(--font-mono);font-size:.58rem;letter-spacing:.06em;
+  box-shadow:0 -4px 20px rgba(109,123,173,.08);
+}
+/* 斜切标签 */
+.music-label{
+  color:var(--shadow-blue);font-size:.54rem;letter-spacing:.12em;
+  padding:3px 10px;background:rgba(247,248,251,.5);
+  clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%);
+}
+.music-btn{
+  background:none;border:none;cursor:pointer;width:26px;height:26px;
+  display:flex;align-items:center;justify-content:center;border-radius:50%;
+  color:var(--ink-light);transition:.2s;
+}
+.music-btn:hover{color:var(--ink);background:rgba(0,0,0,.04)}
+/* 播放按钮 — 外圈仪表环 */
+.music-btn-main{
+  width:34px;height:34px;border:1.5px solid var(--shadow-blue);
+  position:relative;
+}
+.music-btn-main::before{
+  content:'';position:absolute;inset:-3px;border-radius:50%;
+  border:1px solid rgba(109,123,173,.2);
+}
+.music-info{min-width:0;max-width:180px}
+.music-title{font-size:.64rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-family:var(--font-body);font-weight:400}
+.music-artist{font-size:.54rem;color:var(--cloud-line);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* 音量轨 */
+.music-vol{
+  -webkit-appearance:none;width:40px;height:2px;
+  background:linear-gradient(90deg,var(--shadow-blue),var(--cloud-line));
+  outline:none;cursor:pointer;
+}
+.music-vol::-webkit-slider-thumb{-webkit-appearance:none;width:7px;height:7px;border-radius:50%;background:var(--shadow-blue);cursor:pointer}
+.music-shuffle{font-size:.54rem;letter-spacing:.1em;color:var(--cloud-line);cursor:pointer;opacity:.45;transition:.2s}
+.music-shuffle.on{opacity:1;color:var(--signal-lime)}
+
+/* ═══════════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════════ */
+.footer{text-align:center;padding:32px 40px 68px;font-family:var(--font-mono);font-size:.58rem;color:var(--cloud-line);letter-spacing:.1em;position:relative;z-index:1}
+
+/* ═══════════════════════════════════════════
+   ANIMATIONS
+   ═══════════════════════════════════════════ */
+.reveal{opacity:0;transform:translateY(12px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.reveal.vis{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.05s}.d2{transition-delay:.1s}.d3{transition-delay:.15s}.d4{transition-delay:.2s}.d5{transition-delay:.25s}
+
+@media(prefers-reduced-motion:reduce){
+  *{animation-duration:.01ms!important;transition-duration:.01ms!important}
+  .reveal{opacity:1;transform:none}
+  .hero-giant-ring{animation:none}
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════ */
+@media(max-width:860px){
+  .hero-grid-layout{grid-template-columns:1fr;gap:32px}
+  .hero{padding:100px 20px 40px}
+  .hero-name{font-size:3rem}.hero-name-ghost{font-size:2rem;top:-8px}
+  .hero-panels{grid-template-columns:1fr 1fr}
+  .hero-panel.main{grid-column:span 2;transform:none}.hero-panel.main:hover{transform:translateY(-4px)!important}
+  .hero-panel:nth-child(n){transform:none}
+  .articles-grid{grid-template-columns:1fr}
+  .article-case:nth-child(n){transform:none}.article-case:hover{transform:translateY(-6px)!important}
+  .touchstar-content{grid-template-columns:1fr}
+  .touchstar-platform{display:none}
+  .ts-dm:nth-child(n){transform:none!important;opacity:1!important}
+  .bgm-grid{grid-template-columns:repeat(2,1fr)}
+  .contact-terminal{grid-template-columns:1fr}
+  .section{padding:72px 20px}
+  .music-hud{padding:5px 10px;gap:6px}.music-info{max-width:90px}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════ NAV ═══════════ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-id">
+      <span class="nav-id-dot"></span>
+      <span>节点 · 萧和和档案</span>
+      <span class="nav-id-zh"></span>
+    </div>
+    <div class="nav-links">
+      <a href="#home" class="active">00 档案</a>
+      <a href="#articles">01 文章</a>
+      <a href="#chuxing">02 触星</a>
+      <a href="#bangumi">03 追番</a>
+      <a href="#contact">04 联系</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════ HERO — 空间化档案主控台 ═══════════ -->
+<section id="home" class="hero">
+  <div class="hero-giant-ring"></div>
+  <div class="hero-orbit"></div>
+  <div class="hero-scan"></div>
+  <span class="hero-coords tl">坐标 / N31.2304 E121.4737</span>
+  <span class="hero-coords tr">更新 / 2026.06</span>
+  <span class="hero-coords br">节点 / 主页 · 状态 / 活跃</span>
+  <div class="hero-float-block a"></div>
+  <div class="hero-float-block b"></div>
+  <div class="hero-float-block c"></div>
+
+  <div class="hero-grid-layout">
+    <!-- 左：档案舱 -->
+    <div class="hero-profile reveal">
+      <div class="hero-avatar-chamber">
+        <div class="hero-avatar-ring-outer"></div>
+        <div class="hero-avatar-ring-inner"></div>
+        <div class="hero-avatar-label">身份 / 关卡设计师</div>
+        <img src="头像.jpg" alt="萧和和" class="hero-avatar">
+      </div>
+      <div class="hero-profile-tags">
+        <span class="hero-st online">在线</span>
+        <span class="hero-st">ID / CUC.2024</span>
+        <span class="hero-st">专精 / 关卡设计</span>
+      </div>
+    </div>
+
+    <!-- 右：姓名 + 面板 -->
+    <div class="hero-main">
+      <div class="hero-name-wrap">
+        <span class="hero-name-ghost">PROFILE NODE · LEVEL DESIGNER</span>
+        <h1 class="hero-name reveal d1">萧和和</h1>
+      </div>
+      <p class="hero-role reveal d1">
+        关卡设计师 & 独立游戏设计师
+        <span class="hero-role-sub">身份 / 关卡设计师 · 独立游戏开发者 — 中国传媒大学 2024 级</span>
+      </p>
+      <p class="hero-bio reveal d2">
+        中国传媒大学 2024 级网络空间安全专业在读。关卡设计师与独立游戏设计师。
+        热爱游戏与动画，未来媒体协会九代目副社长。专注于游戏机制设计与叙事体验的交叉领域。
+      </p>
+
+      <div class="hero-panels reveal d3">
+        <a href="#chuxing" class="hero-panel main">
+          <div class="hero-panel-num">主节点 · 核心项目</div>
+          <div class="hero-panel-zh">触星</div>
+          <div class="hero-panel-en">TOUCH THE STARS — MAIN PROJECT</div>
+          <div class="hero-panel-status">
+            <span class="hero-panel-dot wip"></span> 开发中
+            <span class="hero-panel-arrow">→</span>
+          </div>
+        </a>
+        <a href="#articles" class="hero-panel">
+          <div class="hero-panel-num">档案 01</div>
+          <div class="hero-panel-zh">文章作品</div>
+          <div class="hero-panel-en">DESIGN WRITINGS</div>
+          <div class="hero-panel-status">
+            <span class="hero-panel-dot on"></span> 已公开
+            <span class="hero-panel-arrow">→</span>
+          </div>
+        </a>
+        <a href="#bangumi" class="hero-panel">
+          <div class="hero-panel-num">档案 02</div>
+          <div class="hero-panel-zh">追番记录</div>
+          <div class="hero-panel-en">MEDIA ARCHIVE</div>
+          <div class="hero-panel-status">
+            <span class="hero-panel-dot on"></span> 已同步
+            <span class="hero-panel-arrow">→</span>
+          </div>
+        </a>
+        <a href="#contact" class="hero-panel">
+          <div class="hero-panel-num">档案 03</div>
+          <div class="hero-panel-zh">联系方式</div>
+          <div class="hero-panel-en">COMM TERMINAL</div>
+          <div class="hero-panel-status">
+            <span class="hero-panel-dot on"></span> 开放
+            <span class="hero-panel-arrow">→</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ ARTICLES — 档案墙 ═══════════ -->
+<section id="articles" class="section">
+  <div class="section-hdr reveal">
+    <div class="section-id">档案柜 · 设计文章</div>
+    <h2>文章作品</h2>
+    <div class="section-sub">案例档案 / 设计文档 · 公开阅览</div>
+  </div>
+
+  <div class="articles-board reveal d1">
+    <div class="articles-grid">
+      <article class="article-case">
+        <span class="article-case-num">I</span>
+        <div class="article-case-id">案例 01 / 关卡设计 / 叙事学</div>
+        <h3>假如关卡会说话</h3>
+        <p>从叙事学角度探讨游戏关卡设计中的隐性表达——如何让空间、机制与敌人配置本身成为叙事语言。</p>
+        <div class="article-case-meta">
+          <span>类型 / 论文</span><span>领域 / 关卡设计</span><span>状态 / 已公开</span>
+        </div>
+        <a href="https://jcnm5t087km2.feishu.cn/wiki/Sn15w3rkCikYA8kS6BwcmH0Xn1f" target="_blank" rel="noopener" class="article-case-link">查阅文档 →</a>
+      </article>
+
+      <article class="article-case">
+        <span class="article-case-num">II</span>
+        <div class="article-case-id">案例 02 / 面试 / 方法论</div>
+        <h3>设计题积累</h3>
+        <p>游戏设计笔试与面试中的常见题型整理，涵盖系统拆解、数值设计、机制分析等方向。</p>
+        <div class="article-case-meta">
+          <span>类型 / 笔记</span><span>领域 / 游戏设计</span><span>状态 / 已公开</span>
+        </div>
+        <a href="https://jcnm5t087km2.feishu.cn/wiki/XQd7wdnxBiFhw6keJ0EcIonDntb" target="_blank" rel="noopener" class="article-case-link">查阅文档 →</a>
+      </article>
+
+      <article class="article-case">
+        <span class="article-case-num">III</span>
+        <div class="article-case-id">案例 03 / Unity 2D / 入门指南</div>
+        <h3>游戏开发入门</h3>
+        <p>面向零基础的游戏开发入门指南，从引擎选择、原型搭建到迭代测试，记录独立游戏开发的核心流程与避坑经验。</p>
+        <div class="article-case-meta">
+          <span>类型 / 指南</span><span>领域 / 游戏开发</span><span>状态 / 已公开</span>
+        </div>
+        <a href="https://jcnm5t087km2.feishu.cn/wiki/GTObwqw2YitX6okkijGcn1wgnDi" target="_blank" rel="noopener" class="article-case-link">查阅文档 →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 触星 — 等距星图沙盘 ═══════════ -->
+<section id="chuxing" class="section">
+  <div class="section-hdr reveal">
+    <div class="section-id">主项目 · 独立游戏</div>
+    <h2>触星</h2>
+    <div class="section-sub">主线项目 / 触星 · 单人独立开发 · 3D 开放世界 RPG</div>
+  </div>
+
+  <div class="touchstar-scene reveal d1">
+    <div class="touchstar-orbit"></div>
+    <div class="touchstar-node a"></div>
+    <div class="touchstar-node b"></div>
+    <div class="touchstar-node c"></div>
+    <div class="touchstar-platform"></div>
+
+    <div class="touchstar-content">
+      <div class="ts-info">
+        <div class="ts-id">状态 / 开发中 · 模式 / 单人 · 类型 / 3D 开放世界 RPG · 周期 / 10 年以上</div>
+        <h3>触星</h3>
+        <div class="ts-sub">主线项目 / TOUCH THE STARS — MAIN PROJECT</div>
+        <div class="ts-desc">
+          <p>主角是来自现实世界的一名高中生——在数学课上昏昏欲睡之际，隐约看到桌上闪烁的星星。触碰之后，醒来已身处异世界的监狱。逃出监狱的尽头，他再次见到那颗星星。</p>
+          <p>每一次触碰，都是一次世界的穿越，一段新的冒险。为期十年以上的单人独立开发项目，由萧和和一人负责全部设计与开发。入群方式：发送邮件至 3279792512@qq.com</p>
+        </div>
+        <a href="mailto:3279792512@qq.com" class="ts-cta">申请加入 / 触星计划 →</a>
+      </div>
+      <div class="ts-data">
+        <div class="ts-dm"><div class="ts-dm-num">3D</div><div class="ts-dm-label">开放世界</div></div>
+        <div class="ts-dm"><div class="ts-dm-num">10<span style="font-size:.4em">+</span></div><div class="ts-dm-label">年开发周期</div></div>
+        <div class="ts-dm"><div class="ts-dm-num">RPG</div><div class="ts-dm-label">剧情驱动</div></div>
+        <div class="ts-dm"><div class="ts-dm-num">1<span style="font-size:.4em">人</span></div><div class="ts-dm-label">独立开发</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ BANGUMI ═══════════ -->
+<section id="bangumi" class="section">
+  <div class="section-hdr reveal">
+    <div class="section-id">媒体库 · 追番记录</div>
+    <h2>追番记录</h2>
+    <div class="section-sub">媒体档案 / Bangumi 数据 · 观看记录</div>
+  </div>
+
+  <div class="bgm-tabs reveal" id="bgmTabs">
+    <button class="bgm-tab active" data-type="3">观看中</button>
+    <button class="bgm-tab" data-type="2">已看完</button>
+    <button class="bgm-tab" data-type="1">想看</button>
+  </div>
+
+  <div class="bgm-grid reveal d1" id="bgmGrid">
+    <div class="bgm-empty">媒体档案加载中…</div>
+  </div>
+</section>
+
+<!-- ═══════════ CONTACT — 通信终端 ═══════════ -->
+<section id="contact" class="section">
+  <div class="section-hdr reveal">
+    <div class="section-id">通信终端 · 联系方式</div>
+    <h2>联系方式</h2>
+    <div class="section-sub">通信节点 / 公开频道 · 可联系状态</div>
+  </div>
+
+  <div class="contact-terminal reveal d1">
+    <a href="mailto:3279792512@qq.com" class="contact-main">
+      <div class="contact-main-label">主通信节点 · 首选渠道</div>
+      <div class="contact-main-value">3279792512@qq.com</div>
+      <div class="contact-main-desc">邮件联系 / 触星项目入群 · 合作洽谈</div>
+      <div class="contact-cli">&gt; 发送消息至 萧和和</div>
+    </a>
+    <div class="contact-secondary">
+      <a href="https://github.com/xiao-he-he" target="_blank" rel="noopener" class="contact-sec">
+        <div class="contact-sec-label">代码仓库 · 已公开</div>
+        <div class="contact-sec-value">xiao-he-he</div>
+      </a>
+      <a href="https://space.bilibili.com/283231751" target="_blank" rel="noopener" class="contact-sec">
+        <div class="contact-sec-label">B 站频道 · 外部链接</div>
+        <div class="contact-sec-value">@283231751</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">© 2024 萧和和 / 个人档案节点 · 版权所有</footer>
+
+<!-- ═══════════ MUSIC HUD ═══════════ -->
+<div class="music-hud" id="musicHud">
+  <span class="music-label">播放中</span>
+  <button class="music-btn music-btn-main" id="btnPlay">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="8,5 19,12 8,19"/></svg>
+  </button>
+  <button class="music-btn" id="btnPrev">
+    <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+  </button>
+  <button class="music-btn" id="btnNext">
+    <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
+  </button>
+  <div class="music-info">
+    <div class="music-title" id="musicTitle">—</div>
+    <div class="music-artist" id="musicArtist"></div>
+  </div>
+  <input type="range" class="music-vol" id="volSlider" min="0" max="100" value="50">
+  <span class="music-shuffle on" id="btnShuffle">随机</span>
+</div>
+
+<script>
+const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')})},{threshold:.06,rootMargin:'0px 0px -14px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+const links=document.querySelectorAll('.nav-links a'),secs=document.querySelectorAll('section[id]');
+window.addEventListener('scroll',()=>{let c='';secs.forEach(s=>{if(window.scrollY>=s.offsetTop-110)c=s.id});links.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+c))});
+
+// ── Bangumi (inline data — file:// safe) ──
+(function(){const g=document.getElementById('bgmGrid'),ts=document.querySelectorAll('.bgm-tab'),b={doing:[],collect:[],wish:[]};
+const DATA=[{"subject":{"images":{"common":"https://lain.bgm.tv/r/400/pic/cover/l/48/c8/586102_OZM7q.jpg","medium":"https://lain.bgm.tv/r/800/pic/cover/l/48/c8/586102_OZM7q.jpg"},"name":"銀河特急 ミルキー☆サブウェイ 各駅停車劇場行き","name_cn":"银河特急 Milky✩Subway 各站停车前往剧场","eps":1},"ep_status":0,"type":1,"rate":0},{"subject":{"images":{"common":"https://lain.bgm.tv/r/400/pic/cover/l/92/95/517057_257ad.jpg","medium":"https://lain.bgm.tv/r/800/pic/cover/l/92/95/517057_257ad.jpg"},"name":"【推しの子】 第3期","name_cn":"【我推的孩子】 第三季","eps":11},"ep_status":0,"type":2,"rate":0},{"subject":{"images":{"common":"https://lain.bgm.tv/r/400/pic/cover/l/a1/ea/587454_1KdKJ.jpg","medium":"https://lain.bgm.tv/r/800/pic/cover/l/a1/ea/587454_1KdKJ.jpg"},"name":"わたしが恋人になれるわけないじゃん、ムリムリ!（※ムリじゃなかった!?）〜ネクストシャイン！〜","name_cn":"我们不可能成为恋人！绝对不行。 (※似乎可行？) 〜再次闪耀！〜","eps":5},"ep_status":0,"type":2,"rate":0},{"subject":{"images":{"common":"https://lain.bgm.tv/r/400/pic/cover/l/f0/51/443831_84ZQs.jpg","medium":"https://lain.bgm.tv/r/800/pic/cover/l/f0/51/443831_84ZQs.jpg"},"name":"Fate/strange Fake","name_cn":"Fate/strange Fake","eps":13},"ep_status":0,"type":2,"rate":10},{"subject":{"images":{"common":"https://lain.bgm.tv/r/400/pic/cover/l/0b/24/515759_qA1Zc.jpg","medium":"https://lain.bgm.tv/r/800/pic/cover/l/0b/24/515759_qA1Zc.jpg"},"name":"葬送のフリーレン 第2期","name_cn":"葬送的芙莉莲 第二季","eps":10},"ep_status":0,"type":2,"rate":10},{"subject":{"images":{"common":"https://lain.bgm.tv/r/400/pic/cover/l/31/06/551918_k5ppS.jpg","medium":"https://lain.bgm.tv/r/800/pic/cover/l/31/06/551918_k5ppS.jpg"},"name":"スティール・ボール・ラン ジョジョの奇妙な冒険 1st STAGE","name_cn":"飙马野郎 JOJO的奇妙冒险 第一赛段","eps":1},"ep_status":0,"type":2,"rate":10},{"subject":{"images":{"common":"https://lain.bgm.tv/r/400/pic/cover/l/71/50/525565_OxOv7.jpg","medium":"https://lain.bgm.tv/r/800/pic/cover/l/71/50/525565_OxOv7.jpg"},"name":"正反対な君と僕","name_cn":"相反的你和我","eps":12},"ep_status":0,"type":1,"rate":0},{"subject":{"images":{"common":"https://lain.bgm.tv/r/400/pic/cover/l/0c/08/548818_iLSG6.jpg","medium":"https://lain.bgm.tv/r/800/pic/cover/l/0c/08/548818_iLSG6.jpg"},"name":"メダリスト 第2期","name_cn":"金牌得主 第二季","eps":9},"ep_status":0,"type":2,"rate":10},{"subject":{"images":{"common":"https://lain.bgm.tv/r/400/pic/cover/l/ab/77/472741_MqsB8.jpg","medium":"https://lain.bgm.tv/r/800/pic/cover/l/ab/77/472741_MqsB8.jpg"},"name":"呪術廻戦 死滅回游 前編","name_cn":"咒术回战 死灭回游 前篇","eps":12},"ep_status":0,"type":2,"rate":10},{"subject":{"images":{"common":"https://lain.bgm.tv/r/400/pic/cover/l/fe/bf/493016_Qqmf5.jpg","medium":"https://lain.bgm.tv/r/800/pic/cover/l/fe/bf/493016_Qqmf5.jpg"},"name":"違国日記","name_cn":"异国日记","eps":13},"ep_status":0,"type":1,"rate":0},{"subject":{"images":{"common":"https://lain.bgm.tv/r/400/pic/cover/l/8e/70/547888_46dnk.jpg","medium":"https://lain.bgm.tv/r/800/pic/cover/l/8e/70/547888_46dnk.jpg"},"name":"Re:ゼロから始める異世界生活 4th season 喪失編","name_cn":"Re：从零开始的异世界生活 第四季 丧失篇","eps":11},"ep_status":0,"type":3,"rate":10},{"subject":{"images":{"common":"https://lain.bgm.tv/r/400/pic/cover/l/30/1b/543360_Ru78k.jpg","medium":"https://lain.bgm.tv/r/800/pic/cover/l/30/1b/543360_Ru78k.jpg"},"name":"上伊那ぼたん、酔へる姿は百合の花","name_cn":"上伊那牡丹，酒醉身姿似百合花般","eps":12},"ep_status":0,"type":3,"rate":10},{"subject":{"images":{"common":"https://lain.bgm.tv/r/400/pic/cover/l/f6/0f/604826_2XWRN.jpg","medium":"https://lain.bgm.tv/r/800/pic/cover/l/f6/0f/604826_2XWRN.jpg"},"name":"超かぐや姫！","name_cn":"超时空辉夜姬！","eps":1},"ep_status":0,"type":2,"rate":10}];
+function r(t){const i=b[t];if(!i.length){g.innerHTML='<div class="bgm-empty">暂无数据，请运行 node fetch_bangumi.js 获取更多</div>';return}g.innerHTML=i.map(x=>{const s=x.subject||{},cv=s.images?.common||s.images?.medium||'',ti=s.name_cn||s.name||'未知',ep=x.ep_status||0,eps=s.eps||'?',rt=x.rate||0;return`<div class="bgm-item">${cv?`<img src="${cv}" alt="${ti}" class="bgm-cover" loading="lazy" onerror="this.style.background=\'#D5DBEC\'">`:'<div class="bgm-cover"></div>'}<div class="bgm-info"><div class="bgm-title">${ti}</div><div class="bgm-meta"><span>${ep}/${eps}</span>${rt>0?`<span class="bgm-rate">★ ${rt}</span>`:''}</div></div></div>`}).join('')}
+ts.forEach(t=>t.addEventListener('click',()=>{ts.forEach(t=>t.classList.remove('active'));t.classList.add('active');r({'3':'doing','2':'collect','1':'wish'}[t.dataset.type])}));
+DATA.forEach(i=>{const t=i.type;if(t===3)b.doing.push(i);else if(t===2)b.collect.push(i);else if(t===1)b.wish.push(i)});
+var active='doing';if(!b.doing.length&&b.collect.length)active='collect';else if(!b.doing.length&&!b.collect.length&&b.wish.length)active='wish';
+ts.forEach(t=>{t.classList.remove('active');if(t.dataset.type==={'doing':'3','collect':'2','wish':'1'}[active])t.classList.add('active')});r(active)})();
+
+// ── Music ──
+(function(){const t=[{file:'music/For River - Piano (Johnny\'s Version) - Kan Gao.mp3',title:'For River - Piano',artist:'Kan Gao'},{file:'music/The des Alizes - Foxtail-Grass Studio.mp3',title:'The des Alizes',artist:'Foxtail-Grass Studio'},{file:'music/fish in the pool・花屋敷 - ヘクとパスカル.mp3',title:'fish in the pool・花屋敷',artist:'ヘクとパスカル'},{file:'music/あまい匂いをさがして - Foxtail-Grass Studio.mp3',title:'あまい匂いをさがして',artist:'Foxtail-Grass Studio'},{file:'music/いい日だったね。 - Depapepe.mp3',title:'いい日だったね。',artist:'Depapepe'},{file:'music/小さな国の城下街 - 柳川和樹.mp3',title:'小さな国の城下街',artist:'柳川和樹'},{file:'music/恋のエチュード - TVサントラ.mp3',title:'恋のエチュード',artist:'TVサントラ'},{file:'music/暮春 - Vuxa.mp3',title:'暮春',artist:'Vuxa'},{file:'music/沢の河城工務店 - Foxtail-Grass Studio.mp3',title:'沢の河城工務店',artist:'Foxtail-Grass Studio'},{file:'music/靴下をはいた猫 - Foxtail-Grass Studio.mp3',title:'靴下をはいた猫',artist:'Foxtail-Grass Studio'}];
+let i=-1,p=false,s=true,d=[];const a=new Audio();a.volume=parseFloat(localStorage.getItem('mv')||'.5');
+const $=id=>document.getElementById(id),bp=$('btnPlay'),vl=$('volSlider'),te=$('musicTitle'),ae=$('musicArtist');vl.value=Math.round(a.volume*100);
+function ub(){bp.innerHTML=p?'<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>':'<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="8,5 19,12 8,19"/></svg>'}
+function nx(){if(!t.length)return -1;if(s){if(!d.length){d=[...Array(t.length).keys()].filter(x=>x!==i);for(let j=d.length-1;j>0;j--){const k=Math.floor(Math.random()*(j+1));[d[j],d[k]]=[d[k],d[j]]}}return d.pop()}return(i+1)%t.length}
+function pl(n){if(n<0||n>=t.length)return;i=n;a.src=encodeURI(t[n].file);a.load();a.play().then(()=>{p=true;ub();te.textContent=t[n].title;ae.textContent=t[n].artist}).catch(e=>{console.warn(e.message);p=false;ub();te.textContent=t[n].title;ae.textContent='播放失败'})}
+bp.addEventListener('click',()=>{if(p){a.pause();p=false;ub()}else{if(i<0)pl(s?Math.floor(Math.random()*t.length):0);else a.play().then(()=>{p=true;ub()}).catch(()=>{})}});
+$('btnPrev').addEventListener('click',()=>pl(s?Math.floor(Math.random()*t.length):(i-1+t.length)%t.length));
+$('btnNext').addEventListener('click',()=>pl(nx()));
+$('btnShuffle').addEventListener('click',function(){s=!s;this.classList.toggle('on',s);if(s)d=[]});
+vl.addEventListener('input',()=>{a.volume=parseFloat(vl.value)/100;localStorage.setItem('mv',a.volume.toString())});
+a.addEventListener('ended',()=>pl(nx()));a.addEventListener('error',()=>{ae.textContent='格式不支持'});ub()})();
+</script>
+</body>
+</html>

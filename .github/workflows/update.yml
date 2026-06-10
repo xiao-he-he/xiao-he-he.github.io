@@ -1,0 +1,21 @@
+name: Auto Update Bangumi & Music
+on:
+  schedule:
+    - cron: '0 8 * * *'  # 每天北京时间 16:00
+  workflow_dispatch:       # 允许手动触发
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm install https-proxy-agent
+      - run: node update.js --cron
+      - name: Commit & Push
+        run: |
+          git config user.name "XiaoHehe Bot"
+          git config user.email "bot@xiaohehe.dev"
+          git add index.html data/bangumi.json
+          git diff --staged --quiet || (git commit -m "🔄 Auto update: Bangumi + Music [$(date +%Y-%m-%d)]" && git push)
