@@ -3,3 +3,7 @@ package.json
 package-lock.json
 *.log
 .DS_Store
+# Large PDFs — articles served via Feishu
+*.pdf
+# Deprecated article HTML
+articles/
